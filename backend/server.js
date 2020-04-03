@@ -19,6 +19,23 @@ connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
 
+app.get('/', (req, res)=>{
+    res.send('Hello');
+    console.log("Main page");
+})
+
+//Чисто для примера
+app.get('/instr', (req, res)=>{
+    res.json([
+        {id:1, text: 'Гитара'},
+        {id:2, text: 'Бас-гитара'},
+        {id:3, text: 'Укулеле'},
+        {id:4, text: 'Синтезатор'}
+    ]);
+    console.log("Instruments");
+})
+
+
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
