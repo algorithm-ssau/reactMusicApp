@@ -17,23 +17,23 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true,useUnifiedTo
 const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
-})
+});
 
 app.get('/', (req, res)=>{
     res.send('Hello');
     console.log("Main page");
-})
+});
 
 //Чисто для примера
 app.get('/instr', (req, res)=>{
     res.json([
-        {id:1, text: 'Гитара'},
-        {id:2, text: 'Бас-гитара'},
-        {id:3, text: 'Укулеле'},
-        {id:4, text: 'Синтезатор'}
+        {id:1, species: 'Гитара', name: 'Fender Stratocaster HSS', price: 150000},
+        {id:2, species: 'Бас-гитара', name: 'Fender Precision Bass', price: 120000},
+        {id:3, species: 'Укулеле', name: 'Flight', price: 3000},
+        {id:4, species: 'Синтезатор', name: 'Roland SY-300', price: 70000}
     ]);
     console.log("Instruments");
-})
+});
 
 
 app.listen(port, () => {

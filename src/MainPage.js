@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Card } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
+import InstrumentCard from './InstrumentCard/instrumentCard';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,7 +20,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function MainPage() {
-  const classes = useStyles();
   const [instrList, setInstrList] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -35,16 +35,14 @@ function MainPage() {
 
   return (
     <div className="container">
-      <h1>Main</h1>
+      <h1>Каталог</h1>
       <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>xs=12</Paper>
-        </Grid>
         {loading
           ? null
           : instrList.map(elem => (
-              <Grid item xs>
-                <Paper className={classes.paper}>{elem.text}</Paper>
+              <Grid item xs={6}>
+                {/*<Paper className={classes.paper}>{elem.text}</Paper>*/}
+                <InstrumentCard instrument={elem}/>
               </Grid>
             ))}
       </Grid>
