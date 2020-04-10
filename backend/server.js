@@ -25,7 +25,7 @@ app.get('/', (req, res)=>{
 });
 
 //Чисто для примера
-app.get('/instr', (req, res)=>{
+app.get('/instr', (req, res) => {
     res.json([
         {id:1, species: 'Гитара', name: 'Fender Stratocaster HSS', price: 150000},
         {id:2, species: 'Бас-гитара', name: 'Fender Precision Bass', price: 120000},
@@ -35,6 +35,9 @@ app.get('/instr', (req, res)=>{
     console.log("Instruments");
 });
 
+app.get('/instrument/:id', (req, res) => {
+
+})
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

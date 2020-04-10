@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { Card } from '@material-ui/core';
+import { Card, Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import {Routes} from '../routes';
 
@@ -17,9 +17,17 @@ const useStyles = makeStyles(theme => ({
         textAlign: "center",
         color: theme.palette.text.secondary
     },
+    whiteContainer:{
+        backgroundColor: theme.palette.text.secondary
+    },
     image: {
-        width: 400,
-        height: 400,
+        margin: 'auto',
+        display: 'block',
+        maxWidth: '100%',
+        maxHeight: '100%',
+    },
+    instrumentName: {
+        marginBottom: 20,
     },
 }));
 
@@ -40,8 +48,19 @@ function InstrumentPage(props) {
 
     return (
         <div className="container">
-            <h1>Инструмент {props.match.params.id}</h1>
-            <img className={classes.image} src={require('../placeholder.png')}/>
+            <Grid className={'bg-white border border-primary'} container spacing={3}>
+                <Grid item xs={7}>
+                    <img className={classes.image} src={require('../placeholder.png')}/>
+                </Grid>
+                <Grid item xs={5}>
+                    <h1>Инструмент {props.match.params.id}</h1>
+                    <h2>100500</h2>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <Button variant="contained" color="primary">
+                        В КОРЗИНУ
+                    </Button>
+                </Grid>
+            </Grid>
         </div>
     );
 }

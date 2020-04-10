@@ -21,6 +21,9 @@ import MailIcon from '@material-ui/icons/Mail';
 import MainPage from './MainPage'
 import clsx from 'clsx';
 import InstrumentPage from "./InstrumentPage/InstrumentPage";
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import StraightenIcon from '@material-ui/icons/Straighten';
+
 
 const drawerWidth = 240;
 
@@ -149,14 +152,16 @@ function App() {
                 </div>
                 <Divider />
                 <List>
-                    {["Товары", "О нас"].map((text, index) => (
+                    {["Товары", "Корзина", "Контакты"].map((text, index) => (
                         <ListItem button key={text}>
                             <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                                {index === 0 ? <StraightenIcon/> :
+                                    (index === 1 ? <ShoppingCartIcon/> : <MailIcon />)}
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
                     ))}
+
                 </List>
             </Drawer>
             <main className={classes.content}>
