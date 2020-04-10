@@ -20,6 +20,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import MainPage from './MainPage'
 import clsx from 'clsx';
+import InstrumentPage from "./InstrumentPage/InstrumentPage";
 
 const drawerWidth = 240;
 
@@ -163,7 +164,7 @@ function App() {
                 <Router>
                     <Switch>
                         <Route exact path="/" component={MainPage} />
-                        <Route path="/instrument/:id" component={MainPage} />
+                        <Route path="/instrument/:id" component={InstrumentPage} />
                     </Switch>
                 </Router>
             </main>

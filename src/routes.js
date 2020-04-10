@@ -1,4 +1,5 @@
-export const ROUTES = {
+export const Routes = {
     Main: '/',
-    Instr: '/instr'
+    Instr: '/instr',
+    Instrument: '/instrument/'
 }

@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
+import {Routes} from '../routes';
+import {NavLink} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,21 +33,22 @@ export default function InstrumentCard(props) {
 
     return (
         <div className={classes.root}>
+            <NavLink exact to={Routes.Instrument + props.instrument.id}>
             <Paper className={classes.paper}>
                 <Grid container spacing={2}>
                     <Grid item>
                         <ButtonBase className={classes.image}>
-                            <img className={classes.img} alt="complex" src="../placeholder.png" />
+                            <img className={classes.img} alt="complex" src={require('../placeholder.png')}/>
                         </ButtonBase>
                     </Grid>
                     <Grid item xs={12} sm container>
                         <Grid item xs container direction="column" spacing={2}>
                             <Grid item xs>
                                 <Typography gutterBottom variant="subtitle1">
-                                    {props.instrument.species}
+                                    {props.instrument.name}
                                 </Typography>
                                 <Typography variant="body2" gutterBottom>
-                                    {props.instrument.name}
+                                    {props.instrument.species}
                                 </Typography>
                             </Grid>
                         </Grid>
@@ -55,6 +58,7 @@ export default function InstrumentCard(props) {
                     </Grid>
                 </Grid>
             </Paper>
+            </NavLink>
         </div>
     );
 }

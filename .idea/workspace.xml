@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df7ecb5f-a807-474f-ad24-04e29bf2d0e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/InstrumentPage/InstrumentPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InstrumentCard/instrumentCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InstrumentCard/instrumentCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InstrumentCard/placeholder.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/placeholder.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +43,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/InstrumentCard" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/InstrumentCard" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -78,7 +80,7 @@
       <workItem from="1585905676329" duration="519000" />
       <workItem from="1585906327047" duration="935000" />
       <workItem from="1586010816117" duration="4162000" />
-      <workItem from="1586521437694" duration="1717000" />
+      <workItem from="1586521437694" duration="6157000" />
     </task>
     <task id="LOCAL-00001" summary="Шаблон страницы + тестовый сервер">
       <created>1585906512756</created>
@@ -101,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586013662434</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Путь на страницу инструмента на сайте">
+      <created>1586523302179</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586523302179</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,20 +119,29 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Шаблон страницы + тестовый сервер" />
     <MESSAGE value="Карточки инструментов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Карточки инструментов" />
+    <MESSAGE value="Путь на страницу инструмента на сайте" />
+    <option name="LAST_COMMIT_MESSAGE" value="Путь на страницу инструмента на сайте" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="284" y="0" width="794" height="732" key="CommitChangelistDialog2" timestamp="1586013661367">
+    <state x="278" y="13" width="806" height="709" key="#Plugins" timestamp="1586523951526">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="284" y="0" width="794" height="732" key="CommitChangelistDialog2/0.0.1366.735@0.0.1366.735" timestamp="1586013661367" />
-    <state x="466" y="127" width="430" height="481" key="FileChooserDialogImpl" timestamp="1586522857221">
+    <state x="278" y="13" width="806" height="709" key="#Plugins/0.0.1366.735@0.0.1366.735" timestamp="1586523951526" />
+    <state x="284" y="0" width="800" height="732" key="CommitChangelistDialog2" timestamp="1586523301558">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="466" y="127" width="430" height="481" key="FileChooserDialogImpl/0.0.1366.735@0.0.1366.735" timestamp="1586522857221" />
+    <state x="284" y="0" width="800" height="732" key="CommitChangelistDialog2/0.0.1366.735@0.0.1366.735" timestamp="1586523301558" />
+    <state x="466" y="127" width="430" height="481" key="FileChooserDialogImpl" timestamp="1586524622454">
+      <screen x="0" y="0" width="1366" height="735" />
+    </state>
+    <state x="466" y="127" width="430" height="481" key="FileChooserDialogImpl/0.0.1366.735@0.0.1366.735" timestamp="1586524622454" />
     <state x="278" y="105" width="806" height="525" key="Vcs.Push.Dialog.v2" timestamp="1586013678548">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
     <state x="278" y="105" width="806" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.735@0.0.1366.735" timestamp="1586013678548" />
+    <state x="346" y="56" width="672" height="678" key="search.everywhere.popup" timestamp="1586524001363">
+      <screen x="0" y="0" width="1366" height="735" />
+    </state>
+    <state x="346" y="56" width="672" height="678" key="search.everywhere.popup/0.0.1366.735@0.0.1366.735" timestamp="1586524001363" />
   </component>
 </project>
