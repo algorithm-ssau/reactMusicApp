@@ -36,7 +36,7 @@ function InstrumentPage(props) {
     const [instrument, setInstrument] = useState({});
     const [loading, setLoading] = useState(true);
 
-    /*useEffect(() => {
+    useEffect(() => {
         fetch(Routes.Instrument + props.match.params.id)
             .then(response => response.json())
             .then(instrument => {
@@ -44,23 +44,25 @@ function InstrumentPage(props) {
                 console.log(instrument);
                 setLoading(false);
             });
-    }, []);*/
+    }, []);
 
     return (
         <div className="container">
             <Grid className={'bg-white border border-primary'} container spacing={3}>
-                {loading ? null : <React.Fragment><Grid item xs={7}>
-                    <img className={classes.image} src={require('../placeholder.png')}/>
-                </Grid>
+                {loading ? null : <React.Fragment>
+                    <Grid item xs={7}>
+                        <img className={classes.image} src={require('../placeholder.png')}/>
+                    </Grid>
                     <Grid item xs={5}>
-                        <h6>Муз</h6>
-                        <h1>Инструмент {props.match.params.id}</h1>
-                        <h2>100500</h2>
-                        <p>Lorem ipsum dolor sit amet</p>
+                        <h6>{instrument.species}</h6>
+                        <h1>{instrument.name}</h1>
+                        <h2>{instrument.price}</h2>
+                        <p>{instrument.description}</p>
                         <Button variant="contained" color="primary">
                             В КОРЗИНУ
                         </Button>
-                    </Grid></React.Fragment>}
+                    </Grid>
+                </React.Fragment>}
             </Grid>
         </div>
     );
