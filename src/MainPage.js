@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import { Card } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import InstrumentCard from './InstrumentCard/instrumentCard';
+import {ROUTES} from './routes';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,7 +25,7 @@ function MainPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/instr")
+    fetch(ROUTES.Instr)
       .then(response => response.json())
       .then(instrList => {
         setInstrList(instrList);

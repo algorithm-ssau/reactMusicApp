@@ -163,6 +163,7 @@ function App() {
                 <Router>
                     <Switch>
                         <Route exact path="/" component={MainPage} />
+                        <Route path="/instrument/:id" component={MainPage} />
                     </Switch>
                 </Router>
             </main>
