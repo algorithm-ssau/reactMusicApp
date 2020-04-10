@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df7ecb5f-a807-474f-ad24-04e29bf2d0e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/InstrumentPage/InstrumentPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InstrumentPage/InstrumentPage.js" afterDir="false" />
+    <list default="true" id="df7ecb5f-a807-474f-ad24-04e29bf2d0e2" name="Default Changelist" comment="Использование данных на клиенте">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,7 @@
       <workItem from="1585905676329" duration="519000" />
       <workItem from="1585906327047" duration="935000" />
       <workItem from="1586010816117" duration="4162000" />
-      <workItem from="1586521437694" duration="12443000" />
+      <workItem from="1586521437694" duration="15712000" />
     </task>
     <task id="LOCAL-00001" summary="Шаблон страницы + тестовый сервер">
       <created>1585906512756</created>
@@ -125,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586533657779</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Использование данных на клиенте">
+      <created>1586534003487</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1586534003487</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,17 +147,18 @@
     <MESSAGE value="Черновой вариант страницы с инструментом" />
     <MESSAGE value="Чистовой вариант страницы с инструментом" />
     <MESSAGE value="Получение данных о предмете с сервера" />
-    <option name="LAST_COMMIT_MESSAGE" value="Получение данных о предмете с сервера" />
+    <MESSAGE value="Использование данных на клиенте" />
+    <option name="LAST_COMMIT_MESSAGE" value="Использование данных на клиенте" />
   </component>
   <component name="WindowStateProjectService">
     <state x="278" y="13" width="806" height="709" key="#Plugins" timestamp="1586523951526">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
     <state x="278" y="13" width="806" height="709" key="#Plugins/0.0.1366.735@0.0.1366.735" timestamp="1586523951526" />
-    <state x="258" y="102" width="800" height="618" key="CommitChangelistDialog2" timestamp="1586533655644">
+    <state x="158" y="0" width="1208" height="735" key="CommitChangelistDialog2" timestamp="1586536066072">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="258" y="102" width="800" height="618" key="CommitChangelistDialog2/0.0.1366.735@0.0.1366.735" timestamp="1586533655644" />
+    <state x="158" y="0" width="1208" height="735" key="CommitChangelistDialog2/0.0.1366.735@0.0.1366.735" timestamp="1586536066072" />
     <state x="0" y="117" width="1098" height="615" key="DiffContextDialog" timestamp="1586531402356">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
@@ -157,10 +167,14 @@
       <screen x="0" y="0" width="1366" height="735" />
     </state>
     <state x="466" y="127" width="430" height="481" key="FileChooserDialogImpl/0.0.1366.735@0.0.1366.735" timestamp="1586524622454" />
-    <state x="295" y="210" width="806" height="525" key="Vcs.Push.Dialog.v2" timestamp="1586531403391">
+    <state x="445" y="75" width="471" height="585" key="RollbackChangesDialog" timestamp="1586536204464">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="295" y="210" width="806" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.735@0.0.1366.735" timestamp="1586531403391" />
+    <state x="445" y="75" width="471" height="585" key="RollbackChangesDialog/0.0.1366.735@0.0.1366.735" timestamp="1586536204464" />
+    <state x="295" y="210" width="806" height="525" key="Vcs.Push.Dialog.v2" timestamp="1586534019679">
+      <screen x="0" y="0" width="1366" height="735" />
+    </state>
+    <state x="295" y="210" width="806" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.735@0.0.1366.735" timestamp="1586534019679" />
     <state x="346" y="56" width="672" height="678" key="search.everywhere.popup" timestamp="1586524001363">
       <screen x="0" y="0" width="1366" height="735" />
     </state>

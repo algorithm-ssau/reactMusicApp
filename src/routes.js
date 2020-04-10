@@ -1,5 +1,6 @@
 export const Routes = {
     Main: '/',
     Instr: '/instr',
-    Instrument: '/instrument/'
+    Instrument: '/instrument/',
+    Checkout: '/checkout'
 }

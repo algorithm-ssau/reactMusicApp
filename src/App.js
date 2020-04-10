@@ -1,6 +1,6 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, NavLink, Route, Switch} from "react-router-dom";
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
@@ -23,6 +23,7 @@ import clsx from 'clsx';
 import InstrumentPage from "./InstrumentPage/InstrumentPage";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import StraightenIcon from '@material-ui/icons/Straighten';
+import {Routes} from './routes';
 
 
 const drawerWidth = 240;
@@ -104,6 +105,7 @@ function App() {
 
     return (
         <div className={classes.root}>
+            <Router>
             <CssBaseline />
             <AppBar
                 position="fixed"
@@ -153,28 +155,40 @@ function App() {
                 <Divider />
                 <List>
                     {["Товары", "Корзина", "Контакты"].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>
-                                {index === 0 ? <StraightenIcon/> :
-                                    (index === 1 ? <ShoppingCartIcon/> : <MailIcon />)}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
+                        <NavLink exact to={selectNavLinkRoute(index)}>
+                            <ListItem button key={text}>
+                                <ListItemIcon>
+                                    {index === 0 ? <StraightenIcon/> :
+                                        (index === 1 ? <ShoppingCartIcon/> : <MailIcon />)}
+                                </ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItem>
+                        </NavLink>
                     ))}
 
                 </List>
             </Drawer>
             <main className={classes.content}>
                 <div className={classes.toolbar} />
-                <Router>
+
                     <Switch>
                         <Route exact path="/" component={MainPage} />
                         <Route path="/instrument/:id" component={InstrumentPage} />
                     </Switch>
-                </Router>
+
             </main>
+        </Router>
         </div>
     );
+}
+
+function selectNavLinkRoute(index) {
+    switch(Number(index)){
+        case 0:
+            return Routes.Main
+        default:
+            return Routes.Main
+    }
 }
 
 export default App;
