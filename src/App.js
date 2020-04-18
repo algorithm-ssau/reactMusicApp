@@ -24,6 +24,7 @@ import InstrumentPage from "./InstrumentPage/InstrumentPage";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import StraightenIcon from '@material-ui/icons/Straighten';
 import {Routes} from './routes';
+import ContactPage from './contactPage/contactPage';
 
 
 const drawerWidth = 240;
@@ -174,6 +175,7 @@ function App() {
                     <Switch>
                         <Route exact path="/" component={MainPage} />
                         <Route path="/instrument/:id" component={InstrumentPage} />
+                        <Route path="/contacts" content={ContactPage} />
                     </Switch>
 
             </main>
@@ -186,6 +188,8 @@ function selectNavLinkRoute(index) {
     switch(Number(index)){
         case 0:
             return Routes.Main
+        case 1:
+            return Routes.Contact
         default:
             return Routes.Main
     }
