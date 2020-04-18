@@ -6,5 +6,7 @@ export const Routes = {
     Contact: '/contacts',
     About: '/about',
     Register: '/register',
-    Login: '/login'
+    Login: '/login',
+    Pay: '/pay',
+    Service: '/service'
 }
