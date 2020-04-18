@@ -5,5 +5,6 @@ export const Routes = {
     Checkout: '/checkout',
     Contact: '/contacts',
     About: '/about',
-    Register: '/register'
+    Register: '/register',
+    Login: '/login'
 }

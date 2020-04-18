@@ -27,6 +27,7 @@ import {Routes} from './routes';
 import ContactPage from './contactPage/contactPage';
 import AboutPage from './aboutPage/aboutPage';
 import RegisterPage from './registerPage/registerPage';
+import LoginPage from './loginPage/loginPage';
 
 
 const drawerWidth = 240;
@@ -180,6 +181,7 @@ function App() {
                         <Route path="/contacts" component={ContactPage} />
                         <Route path="/about" component={AboutPage}/>
                         <Route path="/register" component={RegisterPage}/>
+                        <Route path="/login" component={LoginPage}/>
                     </Switch>
 
             </main>
