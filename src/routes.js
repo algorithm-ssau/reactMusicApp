@@ -4,5 +4,6 @@ export const Routes = {
     Instrument: '/instrument/',
     Checkout: '/checkout',
     Contact: '/contacts',
-    About: '/about'
+    About: '/about',
+    Register: '/register'
 }

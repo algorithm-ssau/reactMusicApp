@@ -26,6 +26,7 @@ import StraightenIcon from '@material-ui/icons/Straighten';
 import {Routes} from './routes';
 import ContactPage from './contactPage/contactPage';
 import AboutPage from './aboutPage/aboutPage';
+import RegisterPage from './registerPage/registerPage';
 
 
 const drawerWidth = 240;
@@ -178,6 +179,7 @@ function App() {
                         <Route path="/instrument/:id" component={InstrumentPage} />
                         <Route path="/contacts" component={ContactPage} />
                         <Route path="/about" component={AboutPage}/>
+                        <Route path="/register" component={RegisterPage}/>
                     </Switch>
 
             </main>
