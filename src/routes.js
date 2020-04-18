@@ -8,5 +8,6 @@ export const Routes = {
     Register: '/register',
     Login: '/login',
     Pay: '/pay',
-    Service: '/service'
+    Service: '/service',
+    Delivery: '/delivery'
 }

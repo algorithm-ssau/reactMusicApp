@@ -30,6 +30,7 @@ import RegisterPage from './registerPage/registerPage';
 import LoginPage from './loginPage/loginPage';
 import PayPage from './payPage/payPage';
 import ServicePage from './Service/servicePage';
+import DeliveryPage from './deliveryPage/deliveryPage';
 
 
 const drawerWidth = 240;
@@ -186,6 +187,7 @@ function App() {
                         <Route path="/login" component={LoginPage}/>
                         <Route path="/pay" component={PayPage}/>
                         <Route path="/service" component={ServicePage}/>
+                        <Route path="/delivery" component={DeliveryPage}/>
                     </Switch>
 
             </main>
