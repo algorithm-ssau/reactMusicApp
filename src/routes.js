@@ -3,5 +3,6 @@ export const Routes = {
     Instr: '/instr',
     Instrument: '/instrument/',
     Checkout: '/checkout',
-    Contact: '/contacts'
+    Contact: '/contacts',
+    About: '/about'
 }
