@@ -24,6 +24,13 @@ import InstrumentPage from "./InstrumentPage/InstrumentPage";
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import StraightenIcon from '@material-ui/icons/Straighten';
 import {Routes} from './routes';
+import ContactPage from './contactPage/contactPage';
+import AboutPage from './aboutPage/aboutPage';
+import RegisterPage from './registerPage/registerPage';
+import LoginPage from './loginPage/loginPage';
+import PayPage from './payPage/payPage';
+import ServicePage from './Service/servicePage';
+import DeliveryPage from './deliveryPage/deliveryPage';
 
 
 const drawerWidth = 240;
@@ -174,6 +181,13 @@ function App() {
                     <Switch>
                         <Route exact path="/" component={MainPage} />
                         <Route path="/instrument/:id" component={InstrumentPage} />
+                        <Route path="/contacts" component={ContactPage} />
+                        <Route path="/about" component={AboutPage}/>
+                        <Route path="/register" component={RegisterPage}/>
+                        <Route path="/login" component={LoginPage}/>
+                        <Route path="/pay" component={PayPage}/>
+                        <Route path="/service" component={ServicePage}/>
+                        <Route path="/delivery" component={DeliveryPage}/>
                     </Switch>
 
             </main>
@@ -186,6 +200,10 @@ function selectNavLinkRoute(index) {
     switch(Number(index)){
         case 0:
             return Routes.Main
+        case 1:
+            return Routes.Contact
+        case 2:
+            return Routes.About
         default:
             return Routes.Main
     }
