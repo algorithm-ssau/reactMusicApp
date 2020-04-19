@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df7ecb5f-a807-474f-ad24-04e29bf2d0e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InstrumentCard/instrumentCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InstrumentCard/instrumentCard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +78,9 @@
       <workItem from="1586521437694" duration="15850000" />
       <workItem from="1586600257809" duration="3445000" />
       <workItem from="1587107498922" duration="3407000" />
-      <workItem from="1587121586151" duration="13007000" />
+      <workItem from="1587121586151" duration="13228000" />
+      <workItem from="1587276093238" duration="206000" />
+      <workItem from="1587278778346" duration="2846000" />
     </task>
     <task id="LOCAL-00001" summary="Шаблон страницы + тестовый сервер">
       <created>1585906512756</created>
@@ -145,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586537318358</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Получение текстовых данных из БД">
+      <created>1587138383719</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587138383719</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,17 +170,18 @@
     <MESSAGE value="Получение данных о предмете с сервера" />
     <MESSAGE value="Использование данных на клиенте" />
     <MESSAGE value="Ссылки в боковом меню" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ссылки в боковом меню" />
+    <MESSAGE value="Получение текстовых данных из БД" />
+    <option name="LAST_COMMIT_MESSAGE" value="Получение текстовых данных из БД" />
   </component>
   <component name="WindowStateProjectService">
     <state x="278" y="13" width="806" height="709" key="#Plugins" timestamp="1586523951526">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
     <state x="278" y="13" width="806" height="709" key="#Plugins/0.0.1366.735@0.0.1366.735" timestamp="1586523951526" />
-    <state x="158" y="0" width="1208" height="735" key="CommitChangelistDialog2" timestamp="1586537316007">
+    <state x="73" y="0" width="1208" height="735" key="CommitChangelistDialog2" timestamp="1587138377697">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="158" y="0" width="1208" height="735" key="CommitChangelistDialog2/0.0.1366.735@0.0.1366.735" timestamp="1586537316007" />
+    <state x="73" y="0" width="1208" height="735" key="CommitChangelistDialog2/0.0.1366.735@0.0.1366.735" timestamp="1587138377697" />
     <state x="0" y="117" width="1098" height="615" key="DiffContextDialog" timestamp="1586531402356">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
@@ -186,10 +194,10 @@
       <screen x="0" y="0" width="1366" height="735" />
     </state>
     <state x="445" y="75" width="471" height="585" key="RollbackChangesDialog/0.0.1366.735@0.0.1366.735" timestamp="1586536204464" />
-    <state x="295" y="210" width="806" height="525" key="Vcs.Push.Dialog.v2" timestamp="1586537416758">
+    <state x="295" y="210" width="806" height="525" key="Vcs.Push.Dialog.v2" timestamp="1587138469360">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="295" y="210" width="806" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.735@0.0.1366.735" timestamp="1586537416758" />
+    <state x="295" y="210" width="806" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.735@0.0.1366.735" timestamp="1587138469360" />
     <state x="346" y="56" width="672" height="678" key="search.everywhere.popup" timestamp="1586524001363">
       <screen x="0" y="0" width="1366" height="735" />
     </state>

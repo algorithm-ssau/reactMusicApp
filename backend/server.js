@@ -37,10 +37,10 @@ const drumScheme = instrumentScheme.clone().set('collection', 'drums');
 const synthScheme = instrumentScheme.clone().set('collection', 'synthesizers');
 
 const Guitar = mongoose.model("Guitar", guitarScheme);
-/*const Drum = mongoose.model("Drum", drumScheme);
+const Drum = mongoose.model("Drum", drumScheme);
 const BassGuitar = mongoose.model("BassGuitar", bassGuitarScheme);
 const Synthesizer = mongoose.model("Synthesizer", synthScheme);
-const Instrument = mongoose.model("Instrument", instrumentScheme);*/
+const Instrument = mongoose.model("Instrument", instrumentScheme);
 
 const errorInstrument = {_id:-1, species: 'Ошибка', name: 'Ошибка', description: 'Ошибка', price: 0, image: null};
 
@@ -52,6 +52,36 @@ app.get('/', (req, res)=>{
 app.get('/guitars', (req, res)=>{
     console.log("Guitars");
     Guitar.find({}, (err, docs) => {
+        if (err) res.json(errorInstrument);
+        else {
+            res.json(docs);
+        }
+    });
+});
+
+app.get('/bass-guitars', (req, res)=>{
+    console.log("Bass-Guitars");
+    BassGuitar.find({}, (err, docs) => {
+        if (err) res.json(errorInstrument);
+        else {
+            res.json(docs);
+        }
+    });
+});
+
+app.get('/drums', (req, res)=>{
+    console.log("Drums");
+    Drum.find({}, (err, docs) => {
+        if (err) res.json(errorInstrument);
+        else {
+            res.json(docs);
+        }
+    });
+});
+
+app.get('/synthesizers', (req, res)=>{
+    console.log("Synthesizers");
+    Synthesizer.find({}, (err, docs) => {
         if (err) res.json(errorInstrument);
         else {
             res.json(docs);
@@ -72,7 +102,9 @@ app.get('/instrument/:id', (req, res) => {
 
     Promise.all(Object.keys(connection.collections).map(col =>
         mongoose.model(col, instrumentScheme.set('collection', col)).findById(req.params.id))
-    ).then(result=>res.json(result.flatMap(x => x)[0]))
+    ).then(result=>{
+        res.json(result.flatMap(x => x).filter(x => (x!=null))[0])
+    })
 })
 
 app.listen(port, () => {
