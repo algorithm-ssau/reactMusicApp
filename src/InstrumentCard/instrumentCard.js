@@ -33,7 +33,7 @@ export default function InstrumentCard(props) {
 
     return (
         <div className={classes.root}>
-            <NavLink exact to={Routes.Instrument + props.instrument.id}>
+            <NavLink exact to={Routes.Instrument + props.instrument._id}>
             <Paper className={classes.paper}>
                 <Grid container spacing={2}>
                     <Grid item>
