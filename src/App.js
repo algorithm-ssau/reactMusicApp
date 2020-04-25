@@ -31,9 +31,18 @@ import LoginPage from './loginPage/loginPage';
 import PayPage from './payPage/payPage';
 import ServicePage from './Service/servicePage';
 import DeliveryPage from './deliveryPage/deliveryPage';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 
 
 const drawerWidth = 240;
+const theme = createMuiTheme({
+    typography: {
+      fontFamily: [
+        'Rubik'
+      ].join(','),
+    }
+  });
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -111,6 +120,7 @@ function App() {
     };
 
     return (
+        <ThemeProvider theme={theme}>
         <div className={classes.root}>
             <Router>
             <CssBaseline />
@@ -193,6 +203,7 @@ function App() {
             </main>
         </Router>
         </div>
+        </ThemeProvider>
     );
 }
 
