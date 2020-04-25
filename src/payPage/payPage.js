@@ -21,7 +21,7 @@ function PayPage(props) {
         </ul>
         <p className="text-center w-75 m-auto"> Для выбора оплаты товара с помощью банковской карты на соответствующей странице необходимо нажать кнопку «Оплата заказа
            банковской картой". Оплата происходит через ПАО СБЕРБАНК с использованием Банковских карт следующих платежных систем: </p> 
-        <p>PayPale <FontAwesomeIcon icon={faCCPaypal} aria-hidden="true" size="3x"/> </p>
+        <p>PayPal <FontAwesomeIcon icon={faCCPaypal} aria-hidden="true" size="3x"/> </p>
         <p>Visa International <FontAwesomeIcon icon={faCCVisa} aria-hidden="true" size="3x"/></p>
         <p>Mastercard Worldwide <FontAwesomeIcon icon={faCCMastercard} aria-hidden="true" size="3x"/></p>
         
