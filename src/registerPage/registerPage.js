@@ -1,42 +1,45 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
+import {Redirect} from 'react-router-dom';
+import {useForm} from 'react-hook-form';
 import "bootstrap/dist/css/bootstrap.min.css";
+import RegisterForm from "./RegisterForm";
 
 function RegisterPage(props) {
-    return (<div className="col-sm-6 offset-sm-3">
-    <h2>Регистрация</h2>
-        <div className="form-group">
-            <label for="firstName">Имя</label>
-            <input type="text" formControlName="firstName" className="form-control" />
-            <div className="invalid-feedback">
-            </div>
+    const [isRegistered, setIsRegistered] = useState(null);
+    const {register, handleSubmit} = useForm();
+    const onSubmit = async (data) => {
+        console.log(data);
+
+        const response = await fetch('/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: JSON.stringify(data)
+        }).then(response => response.json());
+        setIsRegistered(response);
+    }
+
+    return (
+        <div className="col-sm-6 offset-sm-3">
+            <h2>Регистрация</h2>
+            <RegisterForm handleSubmit={handleSubmit(onSubmit)} register={register}/>
+            {
+                isRegistered === null ? <div/> : isRegistered.reg ?
+                <Redirect from={"/register"} to={"login"}/> :
+                    <p className={'text-danger'}>{errorWhat(isRegistered.code)}</p>
+            }
         </div>
-        <div className="form-group">
-            <label for="lastName">Фамилия</label>
-            <input type="text" formControlName="lastName" className="form-control" />
-            <div className="invalid-feedback">
-            </div>
-        </div>
-        <div className="form-group">
-            <label for="username">Логин</label>
-            <input type="text" formControlName="username" className="form-control"/>
-            <div className="invalid-feedback">
-            </div>
-        </div>
-        <div className="form-group">
-            <label for="password">Пароль</label>
-            <input type="password" formControlName="password" className="form-control" />
-            <div className="invalid-feedback">
-            </div>
-        </div>
-        <div className="form-group">
-            <button className="btn btn-warning">
-                <span className="spinner-border spinner-border-sm mr-1"></span>
-                Регистрация
-            </button>
-            <a routerLink="/login" className="btn link-warning">Войти</a>
-        </div>
-    </div>
     );
+}
+
+function errorWhat(code) {
+    switch (code) {
+        case 1: return "Данные не пришли на сервер. Пожалуйста, повторно заполните форму.";
+        case 2: return "Обязательно заполнение всех полей. Пожалуйста, повторно заполните форму."
+        case 11000: return "Данный логин уже используется. Пожалуйста, повторно заполните форму.";
+    }
 }
 
 export default RegisterPage;
