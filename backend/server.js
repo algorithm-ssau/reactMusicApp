@@ -54,9 +54,9 @@ const Instrument = mongoose.model("Instrument", instrumentScheme);
 const errorInstrument = {_id:-1, species: 'Ошибка', name: 'Ошибка', description: 'Ошибка', price: 0, image: null};
 
 const userSchema = new mongoose.Schema({
-    name: String,
-    surname: String,
-    login: String,
+    firstName: String,
+    lastName: String,
+    username: String,
     password: String,
     goods: { type: Array, default: []}
 }, { versionKey: false, collection: 'users' });
@@ -133,8 +133,8 @@ app.post('/register', bodyParser.json(), (req, res) => {
         if(req.body.firstName === "" || req.body.lastName === "" ||
             req.body.username === "" || req.body.password === "") res.status(400).json({code: 2, reg: false});
         else {
-            const user = new User({name: req.body.firstName, surname: req.body.lastName,
-            login: req.body.username, password: req.body.password});
+            const user = new User({firstName: req.body.firstName, lastName: req.body.lastName,
+            username: req.body.username, password: req.body.password});
             user.save((err) => {
                 if (err) {
                     console.log(err.code);
@@ -143,6 +143,26 @@ app.post('/register', bodyParser.json(), (req, res) => {
                 else res.status(200).json({code: 0, reg: true});
             })
 
+        }
+    }
+});
+
+app.post('/login', bodyParser.json(), (req, res) => {
+    console.log(req.body);
+    if (!req.body) res.status(400).json({code: 1, reg: false});
+    else{
+        if(req.body.username === "" || req.body.password === "") res.status(400).json({code: 2, reg: false});
+        else {
+            User.findOne({username: req.body.username, password: req.body.password}, (err, doc) => {
+                if (err) {
+                    console.log(err.code);
+                    res.status(400).json({code: err.code, reg: false});
+                }
+                else {
+                    console.log(doc);
+                    res.status(200).json({code: 0, reg: true});
+                }
+            });
         }
     }
 });

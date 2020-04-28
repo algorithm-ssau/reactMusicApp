@@ -1,5 +1,4 @@
-import React, {Component, useState, useEffect} from 'react';
-import {useForm} from 'react-hook-form';
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function RegisterForm(props) {

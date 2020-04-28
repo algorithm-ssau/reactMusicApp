@@ -1,10 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:material-ui" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d452552-0201-4e20-ab7e-390654de3c15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/registerPage/RegisterForm.js" afterDir="false" />
+    <list default="true" id="8d452552-0201-4e20-ab7e-390654de3c15" name="Default Changelist" comment="Рабочий логин">
+      <change afterPath="$PROJECT_DIR$/src/UserContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/loginPage/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/cjs/popper-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/cjs/popper-base.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/cjs/popper-base.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/cjs/popper-base.js.map" afterDir="false" />
@@ -33,19 +73,16 @@
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/esm/utils/computeAutoPlacement.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/esm/utils/computeAutoPlacement.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/esm/utils/detectOverflow.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/esm/utils/detectOverflow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-base.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-base.js.flow" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-base.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-base.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-base.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-base.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-base.min.js.flow" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-base.min.js.flow" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-base.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-base.min.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-lite.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-lite.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-lite.js.flow" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-lite.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-lite.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-lite.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-lite.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-lite.min.js.flow" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-lite.min.js.flow" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-lite.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper-lite.min.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper.js.flow" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper.min.js.flow" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/dist/umd/popper.min.js.flow" afterDir="false" />
@@ -111,93 +148,6 @@
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/lib/utils/orderModifiers.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/lib/utils/orderModifiers.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/lib/utils/orderModifiers.js.flow" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/lib/utils/orderModifiers.js.flow" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/__snapshots__/index.test.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/__snapshots__/getWindowScroll.test.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/contains.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/contains.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getBorders.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getBoundingClientRect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getClippingRect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getCompositeRect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getComputedStyle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getDecorations.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getDocumentElement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getDocumentRect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getHTMLElementScroll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getLayoutRect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getNodeName.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getNodeScroll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getOffsetParent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getParentNode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getParentNode.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getScrollParent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getViewportRect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getWindow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getWindowScroll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getWindowScroll.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/getWindowScrollBarX.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/instanceOf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/isTableElement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/dom-utils/listScrollParents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/enums.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/index.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/__snapshots__/computeStyles.test.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/__snapshots__/offset.test.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/applyStyles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/applyStyles.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/arrow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/computeStyles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/computeStyles.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/eventListeners.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/flip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/hide.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/offset.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/offset.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/popperOffsets.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/modifiers/preventOverflow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/popper-base.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/popper-lite.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/popper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/types.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/__snapshots__/computeAutoPlacement.test.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/__snapshots__/computeOffsets.test.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/__snapshots__/expandToHashMap.test.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/__snapshots__/mergeByName.test.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/__snapshots__/orderModifiers.test.js.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/computeAutoPlacement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/computeAutoPlacement.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/computeOffsets.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/computeOffsets.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/debounce.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/debounce.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/detectOverflow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/expandToHashMap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/expandToHashMap.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/format.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/getAltAxis.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/getAltAxis.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/getAltLen.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/getAltLen.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/getBasePlacement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/getBasePlacement.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/getFreshSideObject.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/getMainAxisFromPlacement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/getOppositePlacement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/getOppositeVariationPlacement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/getVariation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/getVariation.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/mergeByName.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/mergeByName.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/mergePaddingObject.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/orderModifiers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/orderModifiers.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/rectToClientRect.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/uniqueBy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/uniqueBy.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/validateModifiers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@popperjs/core/src/utils/within.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/@types/react/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@types/react/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@types/react/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@types/react/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@types/react/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@types/react/global.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/@types/react/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/@types/react/index.d.ts" afterDir="false" />
@@ -257,7 +207,6 @@
       <change beforePath="$PROJECT_DIR$/backend/node_modules/mongoose/lib/types/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mongoose/lib/types/map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/mongoose/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mongoose/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/mpath/History.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mpath/History.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/mpath/component.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/mpath/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/mpath/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-bootstrap/Accordion.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-bootstrap/Accordion.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-bootstrap/AccordionCollapse.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-bootstrap/AccordionCollapse.d.ts" afterDir="false" />
@@ -499,10 +448,6 @@
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/cjs/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-overlays/cjs/popper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/cjs/usePopper.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-overlays/cjs/usePopper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/cjs/useRootClose.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-overlays/cjs/useRootClose.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/cjs/utils/isOverflowing.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/cjs/utils/manageAriaHidden.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/cjs/utils/ownerDocument.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/cjs/utils/useWaitForDOMRef.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/Dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/Dropdown.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/DropdownContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/DropdownContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/DropdownMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/DropdownMenu.js" afterDir="false" />
@@ -514,19 +459,14 @@
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/popper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/usePopper.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/usePopper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/useRootClose.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/useRootClose.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/utils/isOverflowing.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/utils/manageAriaHidden.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/utils/ownerDocument.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/esm/utils/useWaitForDOMRef.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-overlays/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/popper/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-overlays/popper/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/usePopper/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-overlays/usePopper/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/node_modules/react-overlays/useRootClose/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/node_modules/react-overlays/useRootClose/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loginPage/loginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/loginPage/loginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/registerPage/RegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/registerPage/RegisterForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/registerPage/registerPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/registerPage/registerPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -554,6 +494,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -566,32 +509,69 @@
       <option name="presentableId" value="Default" />
       <updated>1587978782393</updated>
       <workItem from="1587978785142" duration="6695000" />
+      <workItem from="1588056818855" duration="6595000" />
     </task>
+    <task id="LOCAL-00001" summary="backend/node_modules в gitignore">
+      <created>1587988039616</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587988039616</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="backend/node_modules в gitignore" />
+    <MESSAGE value="Рабочий логин" />
+    <option name="LAST_COMMIT_MESSAGE" value="Рабочий логин" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="201" y="0" width="800" height="732" key="CommitChangelistDialog2" timestamp="1588063626899">
+      <screen x="0" y="0" width="1366" height="735" />
+    </state>
+    <state x="201" y="0" width="800" height="732" key="CommitChangelistDialog2/0.0.1366.735@0.0.1366.735" timestamp="1588063626899" />
+    <state x="97" y="100" width="1172" height="538" key="DiffContextDialog" timestamp="1587988097061">
+      <screen x="0" y="0" width="1366" height="735" />
+    </state>
+    <state x="97" y="100" width="1172" height="538" key="DiffContextDialog/0.0.1366.735@0.0.1366.735" timestamp="1587988097061" />
     <state x="539" y="269" key="Github.ShareDialog" timestamp="1587978822606">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
     <state x="539" y="269" key="Github.ShareDialog/0.0.1366.735@0.0.1366.735" timestamp="1587978822605" />
-    <state x="372" y="80" width="806" height="522" key="Vcs.Push.Dialog.v2" timestamp="1587986528785">
+    <state x="532" y="285" width="298" height="164" key="VCS.ChangelistChooser" timestamp="1587987964147">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="372" y="80" width="806" height="522" key="Vcs.Push.Dialog.v2/0.0.1366.735@0.0.1366.735" timestamp="1587986528785" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/backend/server.js</url>
-          <line>84</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="532" y="285" width="298" height="164" key="VCS.ChangelistChooser/0.0.1366.735@0.0.1366.735" timestamp="1587987964147" />
+    <state x="372" y="80" width="806" height="522" key="Vcs.Push.Dialog.v2" timestamp="1587988090757">
+      <screen x="0" y="0" width="1366" height="735" />
+    </state>
+    <state x="372" y="80" width="806" height="522" key="Vcs.Push.Dialog.v2/0.0.1366.735@0.0.1366.735" timestamp="1587988090757" />
   </component>
 </project>

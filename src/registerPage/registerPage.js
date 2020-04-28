@@ -27,7 +27,7 @@ function RegisterPage(props) {
             <RegisterForm handleSubmit={handleSubmit(onSubmit)} register={register}/>
             {
                 isRegistered === null ? <div/> : isRegistered.reg ?
-                <Redirect from={"/register"} to={"login"}/> :
+                <Redirect from={"/register"} to={"/login"}/> :
                     <p className={'text-danger'}>{errorWhat(isRegistered.code)}</p>
             }
         </div>
