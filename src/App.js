@@ -35,9 +35,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import UserContext from "./UserContext";
+import CheckoutPage from "./CheckoutPage/CheckoutPage";
 
 const drawerWidth = 240;
-
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -241,7 +241,7 @@ function App() {
                         <div className={classes.toolbar}/>
 
                         <Switch>
-                            <Route exact path="/" component={MainPage}/>
+                            <Route exact path={Routes.Main} component={MainPage}/>
                             <Route path="/instrument/:id" component={InstrumentPage}/>
                             <Route path="/contacts" component={ContactPage}/>
                             <Route path="/about" component={AboutPage}/>
@@ -250,6 +250,7 @@ function App() {
                             <Route path="/pay" component={PayPage}/>
                             <Route path="/service" component={ServicePage}/>
                             <Route path="/delivery" component={DeliveryPage}/>
+                            <Route exact path={Routes.Checkout} component={CheckoutPage}/>
                         </Switch>
 
                     </main>

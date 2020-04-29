@@ -167,7 +167,42 @@ app.post('/login', bodyParser.json(), (req, res) => {
     }
 });
 
-//app.post
+app.post('/user-wishlist', bodyParser.json(), (req, res) => {
+    console.log(req.body);
+    if (!req.body) res.status(400).json({code: 1});
+    else if(req.body.username === "") res.status(400).json({code: 2})
+    else {
+        User.findOne({username: req.body.username}, (err, doc) => {
+            if (err) {
+                console.log(err.code);
+                res.status(400).json({code: err.code});
+            }
+            else {
+                console.log(doc);
+                res.status(200).json({code: 0, goods: doc.goods});
+            }
+        });
+    }
+});
+
+app.post('/add-to-wishlist', bodyParser.json(), (req, res) => {
+    if (!req.body) res.status(400).json({code: 1});
+    else {
+        console.log(req.body);
+        User.findOne({username: req.body.username}).then(doc => {
+            //console.log(doc);
+            let wishItem = doc.goods.findIndex(item => item.instrument === req.body.instrument);
+            console.log(wishItem)
+            if (wishItem !== -1) {
+                doc.goods[wishItem]["number"] = doc.goods[wishItem]["number"] + 1;
+            }
+            else doc.goods.push({number: 1, instrument: req.body.instrument});
+            doc.save();
+            console.log(doc);
+            res.sendStatus(200);
+        })
+    }
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
