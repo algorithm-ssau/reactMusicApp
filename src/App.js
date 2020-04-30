@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter as Router, NavLink, Route, Switch} from "react-router-dom";
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import {makeStyles, useTheme} from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -31,7 +31,11 @@ import LoginPage from './loginPage/loginPage';
 import PayPage from './payPage/payPage';
 import ServicePage from './Service/servicePage';
 import DeliveryPage from './deliveryPage/deliveryPage';
-
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import UserContext from "./UserContext";
+import CheckoutPage from "./CheckoutPage/CheckoutPage";
 
 const drawerWidth = 240;
 
@@ -91,6 +95,9 @@ const useStyles = makeStyles(theme => ({
         // necessary for content to be below app bar
         ...theme.mixins.toolbar
     },
+    title: {
+        flexGrow: 1,
+    },
     content: {
         flexGrow: 1,
         padding: theme.spacing(3)
@@ -110,94 +117,151 @@ function App() {
         setOpen(false);
     };
 
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const isMenuOpen = Boolean(anchorEl);
+
+    const handleMenu = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    const [user, setUser] = useState({});
+    const logout = () => setUser({});
+
     return (
         <div className={classes.root}>
-            <Router>
-            <CssBaseline />
-            <AppBar
-                position="fixed"
-                className={clsx(classes.appBar, {
-                    [classes.appBarShift]: open
-                })}
-            >
-                <Toolbar>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        onClick={handleDrawerOpen}
-                        edge="start"
-                        className={clsx(classes.menuButton, {
-                            [classes.hide]: open
+            <UserContext.Provider value={{user: user, setUser: setUser}}>
+                <Router>
+                    <CssBaseline/>
+                    <AppBar
+                        position="fixed"
+                        className={clsx(classes.appBar, {
+                            [classes.appBarShift]: open
                         })}
                     >
-                        <MenuIcon />
-                    </IconButton>
-                    <Typography variant="h6" noWrap>
-                        Музмаг
-                    </Typography>
-                </Toolbar>
-            </AppBar>
-            <Drawer
-                variant="permanent"
-                className={clsx(classes.drawer, {
-                    [classes.drawerOpen]: open,
-                    [classes.drawerClose]: !open
-                })}
-                classes={{
-                    paper: clsx({
-                        [classes.drawerOpen]: open,
-                        [classes.drawerClose]: !open
-                    })
-                }}
-            >
-                <div className={classes.toolbar}>
-                    <IconButton onClick={handleDrawerClose}>
-                        {theme.direction === "rtl" ? (
-                            <ChevronRightIcon />
-                        ) : (
-                            <ChevronLeftIcon />
-                        )}
-                    </IconButton>
-                </div>
-                <Divider />
-                <List>
-                    {["Товары", "Корзина", "Контакты"].map((text, index) => (
-                        <NavLink exact to={selectNavLinkRoute(index)}>
-                            <ListItem button key={text}>
-                                <ListItemIcon>
-                                    {index === 0 ? <StraightenIcon/> :
-                                        (index === 1 ? <ShoppingCartIcon/> : <MailIcon />)}
-                                </ListItemIcon>
-                                <ListItemText primary={text} />
-                            </ListItem>
-                        </NavLink>
-                    ))}
+                        <Toolbar>
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                onClick={handleDrawerOpen}
+                                edge="start"
+                                className={clsx(classes.menuButton, {
+                                    [classes.hide]: open
+                                })}
+                            >
+                                <MenuIcon/>
+                            </IconButton>
+                            <Typography variant="h6" noWrap className={classes.title}>
+                                Музмаг
+                            </Typography>
+                            <IconButton
+                                aria-label="account of current user"
+                                aria-controls="menu-appbar"
+                                aria-haspopup="true"
+                                onClick={handleMenu}
+                                color="inherit"
+                            >
+                                <AccountCircle/>
+                            </IconButton>
+                        </Toolbar>
+                        <div>
 
-                </List>
-            </Drawer>
-            <main className={classes.content}>
-                <div className={classes.toolbar} />
+                            <Menu
+                                id="menu-appbar"
+                                anchorEl={anchorEl}
+                                anchorOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'right',
+                                }}
+                                keepMounted
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'right',
+                                }}
+                                open={isMenuOpen}
+                                onClose={handleClose}
+                            >
+                                {user.username ? (
+                                    <React.Fragment>
+                                    <MenuItem>{user.username}</MenuItem>
+                                    <MenuItem onClick={logout}>
+                                        Выйти
+                                    </MenuItem>
+                                    </React.Fragment>) :
+                                    (<React.Fragment>
+                                        <MenuItem onClick={handleClose}>
+                                    <NavLink exact to={Routes.Login}>Войти</NavLink>
+                                    </MenuItem>
+                                    </React.Fragment>)}
+                            </Menu>
+                        </div>
+                    </AppBar>
+                    <Drawer
+                        variant="permanent"
+                        className={clsx(classes.drawer, {
+                            [classes.drawerOpen]: open,
+                            [classes.drawerClose]: !open
+                        })}
+                        classes={{
+                            paper: clsx({
+                                [classes.drawerOpen]: open,
+                                [classes.drawerClose]: !open
+                            })
+                        }}
+                    >
+                        <div className={classes.toolbar}>
+                            <IconButton onClick={handleDrawerClose}>
+                                {theme.direction === "rtl" ? (
+                                    <ChevronRightIcon/>
+                                ) : (
+                                    <ChevronLeftIcon/>
+                                )}
+                            </IconButton>
+                        </div>
+                        <Divider/>
+                        <List>
+                            {["Товары", "Корзина", "Контакты"].map((text, index) => (
+                                <NavLink exact to={selectNavLinkRoute(index)}>
+                                    <ListItem button key={text}>
+                                        <ListItemIcon>
+                                            {index === 0 ? <StraightenIcon/> :
+                                                (index === 1 ? <ShoppingCartIcon/> : <MailIcon/>)}
+                                        </ListItemIcon>
+                                        <ListItemText primary={text}/>
+                                    </ListItem>
+                                </NavLink>
+                            ))}
 
-                    <Switch>
-                        <Route exact path="/" component={MainPage} />
-                        <Route path="/instrument/:id" component={InstrumentPage} />
-                        <Route path="/contacts" component={ContactPage} />
-                        <Route path="/about" component={AboutPage}/>
-                        <Route path="/register" component={RegisterPage}/>
-                        <Route path="/login" component={LoginPage}/>
-                        <Route path="/pay" component={PayPage}/>
-                        <Route path="/service" component={ServicePage}/>
-                        <Route path="/delivery" component={DeliveryPage}/>
-                    </Switch>
+                        </List>
+                    </Drawer>
+                    <main className={classes.content}>
+                        <div className={classes.toolbar}/>
 
-            </main>
-        </Router>
+                        <Switch>
+                            <Route exact path={Routes.Main} component={MainPage}/>
+                            <Route path="/instrument/:id" component={InstrumentPage}/>
+                            <Route path="/contacts" component={ContactPage}/>
+                            <Route path="/about" component={AboutPage}/>
+                            <Route path="/register" component={RegisterPage}/>
+                            <Route path="/login" component={LoginPage}/>
+                            <Route path="/pay" component={PayPage}/>
+                            <Route path="/service" component={ServicePage}/>
+                            <Route path="/delivery" component={DeliveryPage}/>
+                            <Route exact path={Routes.Checkout} component={CheckoutPage}/>
+                        </Switch>
+
+                    </main>
+                </Router>
+            </UserContext.Provider>
         </div>
     );
 }
 
 function selectNavLinkRoute(index) {
-    switch(Number(index)){
+    switch (Number(index)) {
         case 0:
             return Routes.Main
         case 1:

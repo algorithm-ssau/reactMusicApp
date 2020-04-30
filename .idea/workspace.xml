@@ -1,9 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:material-ui" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7ecb5f-a807-474f-ad24-04e29bf2d0e2" name="Default Changelist" comment="">
+    <list default="true" id="8d452552-0201-4e20-ab7e-390654de3c15" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/CheckoutPage/CheckoutPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InstrumentPage/InstrumentPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InstrumentPage/InstrumentPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,187 +63,96 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1ZkFU3aK4pvzM4Df3IbfmW8WUFU" />
+  <component name="ProjectId" id="1b7MfYCQTyhnamC9uQvyZvpIhKh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../militant-client" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path" value="node" />
-    <property name="nodejs_package_manager_path" value="npm" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/InstrumentCard" />
-    </key>
-  </component>
-  <component name="RunManager" selected="npm.npm start">
-    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
-      <method v="2" />
-    </configuration>
-    <configuration name="npm start" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="df7ecb5f-a807-474f-ad24-04e29bf2d0e2" name="Default Changelist" comment="" />
-      <created>1585375197178</created>
+      <changelist id="8d452552-0201-4e20-ab7e-390654de3c15" name="Default Changelist" comment="" />
+      <created>1587978782393</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1585375197178</updated>
-      <workItem from="1585375198467" duration="445000" />
-      <workItem from="1585905676329" duration="519000" />
-      <workItem from="1585906327047" duration="935000" />
-      <workItem from="1586010816117" duration="4162000" />
-      <workItem from="1586521437694" duration="15850000" />
-      <workItem from="1586600257809" duration="3445000" />
-      <workItem from="1587107498922" duration="3407000" />
-      <workItem from="1587121586151" duration="13228000" />
-      <workItem from="1587276093238" duration="206000" />
-      <workItem from="1587278778346" duration="2846000" />
+      <updated>1587978782393</updated>
+      <workItem from="1587978785142" duration="6695000" />
+      <workItem from="1588056818855" duration="7324000" />
+      <workItem from="1588139849093" duration="9054000" />
     </task>
-    <task id="LOCAL-00001" summary="Шаблон страницы + тестовый сервер">
-      <created>1585906512756</created>
+    <task id="LOCAL-00001" summary="backend/node_modules в gitignore">
+      <created>1587988039616</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1585906512756</updated>
+      <updated>1587988039616</updated>
     </task>
-    <task id="LOCAL-00002" summary="Шаблон страницы + тестовый сервер">
-      <created>1585906582644</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1585906582644</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Карточки инструментов">
-      <created>1586013662434</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1586013662434</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Путь на страницу инструмента на сайте">
-      <created>1586523302179</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1586523302179</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Черновой вариант страницы с инструментом">
-      <created>1586527741378</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1586527741378</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Чистовой вариант страницы с инструментом">
-      <created>1586531273383</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1586531273383</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Получение данных о предмете с сервера">
-      <created>1586533657779</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1586533657779</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Использование данных на клиенте">
-      <created>1586534003487</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1586534003487</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Ссылки в боковом меню">
-      <created>1586537318358</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1586537318358</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Получение текстовых данных из БД">
-      <created>1587138383719</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1587138383719</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Шаблон страницы + тестовый сервер" />
-    <MESSAGE value="Карточки инструментов" />
-    <MESSAGE value="Путь на страницу инструмента на сайте" />
-    <MESSAGE value="Черновой вариант страницы с инструментом" />
-    <MESSAGE value="Чистовой вариант страницы с инструментом" />
-    <MESSAGE value="Получение данных о предмете с сервера" />
-    <MESSAGE value="Использование данных на клиенте" />
-    <MESSAGE value="Ссылки в боковом меню" />
-    <MESSAGE value="Получение текстовых данных из БД" />
-    <option name="LAST_COMMIT_MESSAGE" value="Получение текстовых данных из БД" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="backend/node_modules в gitignore" />
+    <MESSAGE value="Рабочий логин" />
+    <MESSAGE value="Добавление в корзину(нерабочее)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление в корзину(нерабочее)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="278" y="13" width="806" height="709" key="#Plugins" timestamp="1586523951526">
+    <state x="201" y="0" width="800" height="732" key="CommitChangelistDialog2" timestamp="1588063815150">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="278" y="13" width="806" height="709" key="#Plugins/0.0.1366.735@0.0.1366.735" timestamp="1586523951526" />
-    <state x="73" y="0" width="1208" height="735" key="CommitChangelistDialog2" timestamp="1587138377697">
+    <state x="201" y="0" width="800" height="732" key="CommitChangelistDialog2/0.0.1366.735@0.0.1366.735" timestamp="1588063815150" />
+    <state x="97" y="100" width="1172" height="538" key="DiffContextDialog" timestamp="1587988097061">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="73" y="0" width="1208" height="735" key="CommitChangelistDialog2/0.0.1366.735@0.0.1366.735" timestamp="1587138377697" />
-    <state x="0" y="117" width="1098" height="615" key="DiffContextDialog" timestamp="1586531402356">
+    <state x="97" y="100" width="1172" height="538" key="DiffContextDialog/0.0.1366.735@0.0.1366.735" timestamp="1587988097061" />
+    <state x="539" y="269" key="Github.ShareDialog" timestamp="1587978822606">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="0" y="117" width="1098" height="615" key="DiffContextDialog/0.0.1366.735@0.0.1366.735" timestamp="1586531402356" />
-    <state x="466" y="127" width="430" height="481" key="FileChooserDialogImpl" timestamp="1586524622454">
+    <state x="539" y="269" key="Github.ShareDialog/0.0.1366.735@0.0.1366.735" timestamp="1587978822605" />
+    <state x="532" y="285" width="298" height="164" key="VCS.ChangelistChooser" timestamp="1587987964147">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="466" y="127" width="430" height="481" key="FileChooserDialogImpl/0.0.1366.735@0.0.1366.735" timestamp="1586524622454" />
-    <state x="445" y="75" width="471" height="585" key="RollbackChangesDialog" timestamp="1586536204464">
+    <state x="532" y="285" width="298" height="164" key="VCS.ChangelistChooser/0.0.1366.735@0.0.1366.735" timestamp="1587987964147" />
+    <state x="372" y="80" width="806" height="522" key="Vcs.Push.Dialog.v2" timestamp="1588063879356">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="445" y="75" width="471" height="585" key="RollbackChangesDialog/0.0.1366.735@0.0.1366.735" timestamp="1586536204464" />
-    <state x="295" y="210" width="806" height="525" key="Vcs.Push.Dialog.v2" timestamp="1587138469360">
-      <screen x="0" y="0" width="1366" height="735" />
-    </state>
-    <state x="295" y="210" width="806" height="525" key="Vcs.Push.Dialog.v2/0.0.1366.735@0.0.1366.735" timestamp="1587138469360" />
-    <state x="346" y="56" width="672" height="678" key="search.everywhere.popup" timestamp="1586524001363">
-      <screen x="0" y="0" width="1366" height="735" />
-    </state>
-    <state x="346" y="56" width="672" height="678" key="search.everywhere.popup/0.0.1366.735@0.0.1366.735" timestamp="1586524001363" />
+    <state x="372" y="80" width="806" height="522" key="Vcs.Push.Dialog.v2/0.0.1366.735@0.0.1366.735" timestamp="1588063879356" />
   </component>
 </project>
