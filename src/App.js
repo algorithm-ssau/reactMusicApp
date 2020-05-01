@@ -38,17 +38,8 @@ import UserContext from "./UserContext";
 import CheckoutPage from "./CheckoutPage/CheckoutPage";
 import InfoIcon from '@material-ui/icons/Info';
 import {useLocalStorage, useSessionStorage} from "react-use-storage";
-import { createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles';
 
 const drawerWidth = 240;
-const theme = createMuiTheme({
-    typography: {
-    fontFamily: [
-    'Rubik'
-    ].join(','),
-    }
-    });
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -162,7 +153,6 @@ function App() {
 
     //А здесь код ui, в котором чёрт ногу сломит
     return (
-        <ThemeProvider theme={theme}>
         <div className={classes.root}>
             <UserContext.Provider value={{user: user, setUser: setUser, cart: cart, setCart: setCart,
                 removeFromCart: removeFromCart}}>
@@ -290,7 +280,6 @@ function App() {
                 </Router>
             </UserContext.Provider>
         </div>
-        </ThemeProvider>
     );
 }
 
