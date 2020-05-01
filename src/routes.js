@@ -9,5 +9,7 @@ export const Routes = {
     Login: '/login',
     Pay: '/pay',
     Service: '/service',
-    Delivery: '/delivery'
+    Delivery: '/delivery',
+    UserWishlist: '/user-wishlist',
+    AddToWishlist: '/add-to-wishlist'
 }

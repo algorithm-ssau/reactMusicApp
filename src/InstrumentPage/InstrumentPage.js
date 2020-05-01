@@ -1,4 +1,4 @@
-import React, {Component, useState, useEffect} from 'react';
+import React, {Component, useState, useEffect, useContext} from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {Link} from 'react-router-dom';
 import {makeStyles} from '@material-ui/core/styles';
@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import {Card, Button} from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import {Routes} from '../routes';
+import UserContext from "../UserContext";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -35,6 +36,7 @@ function InstrumentPage(props) {
     const classes = useStyles();
     const [instrument, setInstrument] = useState({});
     const [loading, setLoading] = useState(true);
+    const {cart, setCart} = useContext(UserContext);
 
     useEffect(() => {
         fetch(Routes.Instrument + props.match.params.id)
@@ -45,6 +47,24 @@ function InstrumentPage(props) {
                 setLoading(false);
             });
     }, []);
+
+    const add = (event) => {
+        event.preventDefault();
+        setCart(cart.concat(instrument))
+        addToCart(instrument);
+        console.log(cart)
+    }
+
+    function addToCart(instrument) {
+        let instrIndex = cart.findIndex(item => item.instrument._id == instrument._id);
+        console.log(instrIndex === -1)
+        if (instrIndex === -1) setCart(cart.concat([{instrument: instrument, count: 1}]));
+
+        else setCart(cart.map((item, index) => {
+            if(index === instrIndex) item.count++;
+            return item;
+        }))
+    }
 
     return (
         <div className="container">
@@ -58,7 +78,7 @@ function InstrumentPage(props) {
                         <h1>{instrument.name}</h1>
                         <h2>{instrument.price}</h2>
                         <p>{instrument.description}</p>
-                        <Button variant="contained" color="primary">
+                        <Button variant="contained" color="primary" onClick={add}>
                             В КОРЗИНУ
                         </Button>
                     </Grid>
