@@ -13,6 +13,16 @@
   }
 }
 
+@font-face {
+  font-family: 'Rubik Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local('Rubik Regular'),
+  url('./Fonts/Rubik/Rubik-Regular.woff')
+  format('woff');
+  }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
