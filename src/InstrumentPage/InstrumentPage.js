@@ -36,7 +36,7 @@ function InstrumentPage(props) {
     const classes = useStyles();
     const [instrument, setInstrument] = useState({});
     const [loading, setLoading] = useState(true);
-    const {user} = useContext(UserContext);
+    const {cart, setCart} = useContext(UserContext);
 
     useEffect(() => {
         fetch(Routes.Instrument + props.match.params.id)
@@ -48,20 +48,22 @@ function InstrumentPage(props) {
             });
     }, []);
 
-    const addToWishlist = (event) => {
+    const add = (event) => {
         event.preventDefault();
-        const data = {
-            username: user.username,
-            instrument: instrument._id
-        };
-        let response = fetch(Routes.AddToWishlist,{
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        });
-        if (response.ok) alert("instrument added to wishlist")
+        setCart(cart.concat(instrument))
+        addToCart(instrument);
+        console.log(cart)
+    }
+
+    function addToCart(instrument) {
+        let instrIndex = cart.findIndex(item => item.instrument._id == instrument._id);
+        console.log(instrIndex === -1)
+        if (instrIndex === -1) setCart(cart.concat([{instrument: instrument, count: 1}]));
+
+        else setCart(cart.map((item, index) => {
+            if(index === instrIndex) item.count++;
+            return item;
+        }))
     }
 
     return (
@@ -76,15 +78,9 @@ function InstrumentPage(props) {
                         <h1>{instrument.name}</h1>
                         <h2>{instrument.price}</h2>
                         <p>{instrument.description}</p>
-                        {
-                            user.username ?
-                                (<Button variant="contained" color="primary" onClick={addToWishlist}>
-                                В КОРЗИНУ
-                            </Button>) :
-                                (
-                                    <p className={"text-danger"}>Вы должны войти в аккаунт, чтобы иметь возможность совершить покупку</p>
-                                )
-                        }
+                        <Button variant="contained" color="primary" onClick={add}>
+                            В КОРЗИНУ
+                        </Button>
                     </Grid>
                 </React.Fragment>}
             </Grid>

@@ -34,19 +34,27 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:material-ui" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:backend" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:testing-library" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d452552-0201-4e20-ab7e-390654de3c15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CheckoutPage/CheckoutPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CheckoutPage/CheckoutPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CheckoutPage/CheckoutPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/InstrumentPage/InstrumentPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InstrumentPage/InstrumentPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +98,7 @@
       <workItem from="1587978785142" duration="6695000" />
       <workItem from="1588056818855" duration="7324000" />
       <workItem from="1588139849093" duration="9054000" />
+      <workItem from="1588316130842" duration="6334000" />
     </task>
     <task id="LOCAL-00001" summary="backend/node_modules в gitignore">
       <created>1587988039616</created>
@@ -134,6 +143,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Добавление в корзину(нерабочее)" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588323704607">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1588323704607" />
     <state x="201" y="0" width="800" height="732" key="CommitChangelistDialog2" timestamp="1588063815150">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
@@ -146,6 +159,22 @@
       <screen x="0" y="0" width="1366" height="735" />
     </state>
     <state x="539" y="269" key="Github.ShareDialog/0.0.1366.735@0.0.1366.735" timestamp="1587978822605" />
+    <state width="1344" height="174" key="GridCell.Tab.0.bottom" timestamp="1588275355689">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588275355689" />
+    <state width="1344" height="174" key="GridCell.Tab.0.center" timestamp="1588275355689">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588275355689" />
+    <state width="1344" height="174" key="GridCell.Tab.0.left" timestamp="1588275355689">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588275355689" />
+    <state width="1344" height="174" key="GridCell.Tab.0.right" timestamp="1588275355689">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588275355689" />
     <state x="532" y="285" width="298" height="164" key="VCS.ChangelistChooser" timestamp="1587987964147">
       <screen x="0" y="0" width="1366" height="735" />
     </state>

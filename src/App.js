@@ -105,6 +105,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function App() {
+    /*Все это нужно для работы material-ui*/
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
@@ -128,12 +129,29 @@ function App() {
         setAnchorEl(null);
     };
 
+    /*А это нужно для работы сайта*/
     const [user, setUser] = useState({});
+    const [cart, setCart] = useState([]);
     const logout = () => setUser({});
+
+    console.log('Cart')
+    console.log(cart)
+
+    function removeFromCart(instrument) {
+        let instrIndex = cart.findIndex(item => item.instrument._id == instrument._id);
+        if (instrIndex !== -1){
+            if (cart[instrIndex].count === 1) setCart(cart.filter((item, index) => index !== instrIndex));
+            else setCart(cart.map((item, index) => {
+                if(index === instrIndex) item.count -= 1;
+                return item;
+            }));
+        }
+    }
 
     return (
         <div className={classes.root}>
-            <UserContext.Provider value={{user: user, setUser: setUser}}>
+            <UserContext.Provider value={{user: user, setUser: setUser, cart: cart, setCart: setCart,
+                removeFromCart: removeFromCart}}>
                 <Router>
                     <CssBaseline/>
                     <AppBar
@@ -265,7 +283,7 @@ function selectNavLinkRoute(index) {
         case 0:
             return Routes.Main
         case 1:
-            return Routes.Contact
+            return Routes.Checkout
         case 2:
             return Routes.About
         default:

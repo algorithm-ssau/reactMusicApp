@@ -18,9 +18,10 @@ const useStyles = makeStyles({
 });
 
 function CheckoutPage(props) {
-    const {user} = useContext(UserContext);
-    const [userWishlist, setUserWishlist] = useState([]);
+    const {user, cart, removeFromCart} = useContext(UserContext);
+    const classes = useStyles();
 
+    console.log(cart);
     /*useEffect(() => {
         fetch(Routes.UserWishlist,{
             method: 'POST',
@@ -36,13 +37,28 @@ function CheckoutPage(props) {
     return (
         <div class="container ">
             <h1>Корзина</h1>
-            {user ? (
-                    <div className="alert alert-warning" role="alert">
-                        <p>Пожалуйста, зарегистрируйтесь или войдите в аккаунт для того, чтобы совершить покупку.</p>
-                    </div>
-            ) : (
-                <p>табличка</p>
-            )}
+            <TableContainer component={Paper}>
+                <Table className={classes.table} aria-label="Товары">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell>Товар</TableCell>
+                            <TableCell align="right">Количество</TableCell>
+                            <TableCell align="right">Цена&nbsp;(Р)</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {cart.map(item => (
+                            <TableRow key={item.instrument.name}>
+                                <TableCell component="th" scope="row">
+                                    {item.instrument.name}
+                                </TableCell>
+                                <TableCell align="right">{item.count}</TableCell>
+                                <TableCell align="right">{item.instrument.price * item.count}</TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </TableContainer>
         </div>
 
     );
