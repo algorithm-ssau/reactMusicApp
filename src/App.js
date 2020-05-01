@@ -36,6 +36,8 @@ import Menu from '@material-ui/core/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import UserContext from "./UserContext";
 import CheckoutPage from "./CheckoutPage/CheckoutPage";
+import InfoIcon from '@material-ui/icons/Info';
+import {useLocalStorage, useSessionStorage} from "react-use-storage";
 
 const drawerWidth = 240;
 
@@ -129,13 +131,14 @@ function App() {
         setAnchorEl(null);
     };
 
+
     /*А это нужно для работы сайта*/
-    const [user, setUser] = useState({});
-    const [cart, setCart] = useState([]);
+    const [user, setUser] = useSessionStorage('user', {}); //useState({});
+    const [cart, setCart] = useLocalStorage('cart', []);
     const logout = () => setUser({});
 
     console.log('Cart')
-    console.log(cart)
+    console.log(localStorage.cart)
 
     function removeFromCart(instrument) {
         let instrIndex = cart.findIndex(item => item.instrument._id == instrument._id);
@@ -148,6 +151,7 @@ function App() {
         }
     }
 
+    //А здесь код ui, в котором чёрт ногу сломит
     return (
         <div className={classes.root}>
             <UserContext.Provider value={{user: user, setUser: setUser, cart: cart, setCart: setCart,
@@ -241,12 +245,13 @@ function App() {
                         </div>
                         <Divider/>
                         <List>
-                            {["Товары", "Корзина", "Контакты"].map((text, index) => (
+                            {["Товары", "Корзина", "О нас", "Контакты"].map((text, index) => (
                                 <NavLink exact to={selectNavLinkRoute(index)}>
                                     <ListItem button key={text}>
                                         <ListItemIcon>
                                             {index === 0 ? <StraightenIcon/> :
-                                                (index === 1 ? <ShoppingCartIcon/> : <MailIcon/>)}
+                                                index === 1 ? <ShoppingCartIcon/> :
+                                                    index === 2 ? <InfoIcon/>: <MailIcon/>}
                                         </ListItemIcon>
                                         <ListItemText primary={text}/>
                                     </ListItem>
@@ -286,6 +291,8 @@ function selectNavLinkRoute(index) {
             return Routes.Checkout
         case 2:
             return Routes.About
+        case 3:
+            return Routes.Contact
         default:
             return Routes.Main
     }
