@@ -11,6 +11,8 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Slider from "@material-ui/core/Slider";
 import {Button} from "@material-ui/core";
+import {useHistory} from 'react-router-dom';
+import {Routes} from "../routes";
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -39,6 +41,7 @@ export default function SearchModal(props) {
     const [price, setPrice] = useState([0, 10000]);
     const [name, setName] = useState('');
     const [species, setSpecies] = useState('');
+    let history = useHistory();
 
     const handlePriceChange = (event, newValue) => {
         setPrice(newValue);
@@ -57,7 +60,10 @@ export default function SearchModal(props) {
             minPrice: price[0],
             maxPrice: price[1]
         };
-        console.log(data);
+        props.setData(data);
+        history.push(Routes.Main);
+        history.push(Routes.Search);
+        props.handleClose();
     }
 
     return (
@@ -87,10 +93,10 @@ export default function SearchModal(props) {
                                 id="species-select"
                                 name="species"
                             >
-                                <MenuItem value="Гитара">Гитара</MenuItem>
-                                <MenuItem value="Бас-гитара">Бас-гитара</MenuItem>
-                                <MenuItem value="Синтезатор">Синтезатор</MenuItem>
-                                <MenuItem value="Барабан">Барабан</MenuItem>
+                                <MenuItem value="guitars">Гитара</MenuItem>
+                                <MenuItem value="bass-guitars">Бас-гитара</MenuItem>
+                                <MenuItem value="synthesizers">Синтезатор</MenuItem>
+                                <MenuItem value="drums">Барабан</MenuItem>
                             </Select>
                         </FormControl>
                         <div className={classes.slider}>

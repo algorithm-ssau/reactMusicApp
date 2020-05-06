@@ -41,6 +41,7 @@ import {useLocalStorage, useSessionStorage} from "react-use-storage";
 import SearchIcon from '@material-ui/icons/Search';
 import SearchModal from "./Search/SearchModal";
 import Box from "@material-ui/core/Box";
+import SearchPage from "./Search/SearchPage";
 
 const drawerWidth = 240;
 
@@ -113,7 +114,7 @@ function App() {
     /*Все это нужно для работы material-ui*/
     const classes = useStyles();
     const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
 
     const handleDrawerOpen = () => {
@@ -148,6 +149,7 @@ function App() {
     /*А это нужно для работы сайта*/
     const [user, setUser] = useSessionStorage('user', {}); //useState({});
     const [cart, setCart] = useLocalStorage('cart', []);
+    const [searchData, setSearchData] = useState({});
     const logout = () => setUser({});
 
     console.log('Cart')
@@ -168,7 +170,7 @@ function App() {
     return (
         <div className={classes.root}>
             <UserContext.Provider value={{user: user, setUser: setUser, cart: cart, setCart: setCart,
-                removeFromCart: removeFromCart}}>
+                removeFromCart: removeFromCart, searchData: searchData}}>
                 <Router>
                     <CssBaseline/>
                     <AppBar
@@ -212,8 +214,8 @@ function App() {
                             </IconButton>
                         </Toolbar>
                         <div>
-
-                                <SearchModal open={searchOpen} handleClose={handleSearchClose}/>
+                            <SearchModal open={searchOpen} handleClose={handleSearchClose}
+                                         setData={setSearchData}/>
                             <Menu
                                 id="menu-appbar"
                                 anchorEl={anchorEl}
@@ -299,6 +301,7 @@ function App() {
                             <Route path="/pay" component={PayPage}/>
                             <Route path="/service" component={ServicePage}/>
                             <Route path="/delivery" component={DeliveryPage}/>
+                            <Route path={Routes.Search} component={SearchPage}/>
                             <Route exact path={Routes.Checkout} component={CheckoutPage}/>
                         </Switch>
 

@@ -13,6 +13,7 @@ const urlencodedParser = bodyParser.urlencoded({extended: false});
 app.use(cors());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(urlencodedParser);
+app.use(bodyParser.json());
 
 const uri = process.env.ATLAS_URI;
 const usersUri = process.env.USERS_URI;
@@ -200,6 +201,27 @@ app.post('/add-to-wishlist', bodyParser.json(), (req, res) => {
             doc.save();
             console.log(doc);
             res.sendStatus(200);
+        })
+    }
+});
+
+app.post('/search', (req, res) => {
+    console.log(req.body);
+    if (!req.body) res.status(400).json({code: 1});
+    else {
+        mongoose.model(req.body.species, instrumentScheme.set('collection', req.body.species)).find({}, (err, docs) => {
+            if (err) {
+                console.log(err.code);
+                res.status(400).json({code: err.code, reg: false});
+            }
+            else {
+                let result = docs.filter(value =>
+                    value.price <= req.body.maxPrice
+                    && value.price >= req.body.minPrice
+                    && value.name.toLowerCase().includes(req.body.name.toLowerCase()))
+                console.log(result)
+                res.json(result)
+            }
         })
     }
 });
