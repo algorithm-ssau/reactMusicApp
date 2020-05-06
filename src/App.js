@@ -43,13 +43,14 @@ import SearchModal from "./Search/SearchModal";
 import Box from "@material-ui/core/Box";
 import SearchPage from "./Search/SearchPage";
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const useStyles = makeStyles(theme => ({
     root: {
         display: "flex"
     },
     appBar: {
+        background: 'white',
         zIndex: theme.zIndex.drawer + 1,
         transition: theme.transitions.create(["width", "margin"], {
             easing: theme.transitions.easing.sharp,
@@ -76,6 +77,8 @@ const useStyles = makeStyles(theme => ({
         whiteSpace: "nowrap"
     },
     drawerOpen: {
+        backgroundColor: 'black',
+        background: 'black',
         width: drawerWidth,
         transition: theme.transitions.create("width", {
             easing: theme.transitions.easing.sharp,
@@ -83,14 +86,16 @@ const useStyles = makeStyles(theme => ({
         })
     },
     drawerClose: {
+        backgroundColor: 'black',
+        background: 'black',
         transition: theme.transitions.create("width", {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen
         }),
         overflowX: "hidden",
-        width: theme.spacing(7) + 1,
+        width: theme.spacing(6) + 1,
         [theme.breakpoints.up("sm")]: {
-            width: theme.spacing(9) + 1
+            width: theme.spacing(7) + 1
         }
     },
     toolbar: {
@@ -103,10 +108,17 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
         flexGrow: 1,
+        color: 'black'
     },
     content: {
         flexGrow: 1,
         padding: theme.spacing(3)
+    },
+    blackColor:{
+        color: 'black'
+    },
+    whiteColor:{
+        color: 'white'
     }
 }));
 
@@ -149,7 +161,7 @@ function App() {
     /*А это нужно для работы сайта*/
     const [user, setUser] = useSessionStorage('user', {}); //useState({});
     const [cart, setCart] = useLocalStorage('cart', []);
-    const [searchData, setSearchData] = useState({});
+    const [searchData, setSearchData] = useState([]);
     const logout = () => setUser({});
 
     console.log('Cart')
@@ -187,12 +199,11 @@ function App() {
                                 edge="start"
                                 className={clsx(classes.menuButton, {
                                     [classes.hide]: open
-                                })}
+                                }, classes.blackColor)}
                             >
                                 <MenuIcon/>
                             </IconButton>
                             <Typography variant="h6" noWrap className={classes.title}>
-                                Музмаг
                             </Typography>
                             <IconButton
                                 aria-label="search"
@@ -201,7 +212,7 @@ function App() {
                                 onClick={handleSearchOpen}
                                 color="inherit"
                             >
-                                    <SearchIcon/>
+                                    <SearchIcon style={{color: 'Gray'}}/>
                             </IconButton>
                             <IconButton
                                 aria-label="account of current user"
@@ -210,7 +221,7 @@ function App() {
                                 onClick={handleMenu}
                                 color="inherit"
                             >
-                                <AccountCircle/>
+                                <AccountCircle style={{color: 'Gray'}}/>
                             </IconButton>
                         </Toolbar>
                         <div>
@@ -265,23 +276,24 @@ function App() {
                         <div className={classes.toolbar}>
                             <IconButton onClick={handleDrawerClose}>
                                 {theme.direction === "rtl" ? (
-                                    <ChevronRightIcon/>
+                                    <ChevronRightIcon style={{color: 'Silver'}}/>
                                 ) : (
-                                    <ChevronLeftIcon/>
+                                    <ChevronLeftIcon style={{color: 'Silver'}}/>
                                 )}
                             </IconButton>
                         </div>
                         <Divider/>
                         <List>
                             {["Товары", "Корзина", "О нас", "Контакты"].map((text, index) => (
-                                <NavLink exact to={selectNavLinkRoute(index)}>
+                                <NavLink exact to={selectNavLinkRoute(index)} style={{textDecoration: 'none'}}>
                                     <ListItem button key={text}>
-                                        <ListItemIcon>
-                                            {index === 0 ? <StraightenIcon/> :
-                                                index === 1 ? <ShoppingCartIcon/> :
-                                                    index === 2 ? <InfoIcon/>: <MailIcon/>}
+                                        <ListItemIcon style={{margin: "auto"}}>
+                                            {index === 0 ? <StraightenIcon style={{color: 'Silver'}}/> :
+                                                index === 1 ? <ShoppingCartIcon style={{color: 'Silver'}}/> :
+                                                    index === 2 ? <InfoIcon style={{color: 'Silver'}}/>
+                                                    : <MailIcon style={{color: 'Silver'}}/>}
                                         </ListItemIcon>
-                                        <ListItemText primary={text}/>
+                                        <ListItemText primary={text} style={{color: 'Silver'}}/>
                                     </ListItem>
                                 </NavLink>
                             ))}

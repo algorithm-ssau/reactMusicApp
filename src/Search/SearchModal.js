@@ -60,10 +60,20 @@ export default function SearchModal(props) {
             minPrice: price[0],
             maxPrice: price[1]
         };
-        props.setData(data);
-        history.push(Routes.Main);
-        history.push(Routes.Search);
         props.handleClose();
+        let getInstr = async () => await fetch('/search', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        getInstr().then(response => response.json())
+            .then(instrList => {
+                props.setData(instrList);
+                console.log(instrList);
+            });
+        history.push(Routes.Search);
     }
 
     return (
@@ -107,12 +117,13 @@ export default function SearchModal(props) {
                                 onChange={handlePriceChange}
                                 valueLabelDisplay="auto"
                                 aria-labelledby="range-slider"
+                                style={{color: 'orange'}}
                             />
                         </div>
                     </form>
-                    <Button variant="contained" color="primary" onClick={search}>
+                    <button onClick={search} className="btn btn-warning">
                         НАЙТИ
-                    </Button>
+                    </button>
                 </div>
             </Modal>
     );

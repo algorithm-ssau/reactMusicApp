@@ -22,35 +22,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function SearchPage() {
-    const [instrList, setInstrList] = useState([]);
-    const [loading, setLoading] = useState(true);
     const {searchData} = useContext(UserContext);
-
-    useEffect(() => {
-        let getInstr = async () => await fetch('/search', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: JSON.stringify(searchData)
-        });
-        getInstr().then(response => response.json())
-            .then(instrList => {
-                setInstrList(instrList);
-                console.log(instrList);
-                setLoading(false);
-            });
-    }, []);
-
 
     return (
         <div className="container">
             <h1>Результат поиска</h1>
             <Grid container spacing={2}>
-                {loading
-                    ? null
-                    : instrList.length > 0 ? instrList.map(elem => (
+                {searchData.length > 0 ? searchData.map(elem => (
                         <Grid item xs={6}>
                             {/*<Paper className={classes.paper}>{elem.text}</Paper>*/}
                             <InstrumentCard instrument={elem}/>

@@ -1,4 +1,5 @@
 import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -33,12 +34,13 @@ export default function InstrumentCard(props) {
 
     return (
         <div className={classes.root}>
-            <NavLink exact to={Routes.Instrument + props.instrument._id}>
+            <NavLink exact to={Routes.Instrument + props.instrument._id} style={{textDecoration: 'none'}}>
             <Paper className={classes.paper}>
                 <Grid container spacing={2}>
                     <Grid item>
                         <ButtonBase className={classes.image}>
-                            <img className={classes.img} alt="complex" src={require('../placeholder.png')}/>
+                            {props.instrument.image == null ? <img className={classes.img} src={require('../placeholder.png')}/>
+                                : <img className={classes.img} src={process.env.PUBLIC_URL + '/img/' + props.instrument.image}/>}
                         </ButtonBase>
                     </Grid>
                     <Grid item xs={12} sm container>

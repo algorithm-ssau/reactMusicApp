@@ -38,7 +38,7 @@ const instrumentScheme = new mongoose.Schema({
     species: String,
     description: String,
     price: Number,
-    image: mongoose.Schema.Types.ObjectID
+    image: String
 }, { versionKey: false });
 
 const guitarScheme = instrumentScheme.clone().set('collection', 'guitars');

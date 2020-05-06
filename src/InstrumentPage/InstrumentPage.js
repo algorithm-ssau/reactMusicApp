@@ -66,21 +66,23 @@ function InstrumentPage(props) {
         }))
     }
 
+
     return (
         <div className="container">
-            <Grid className={'bg-white border border-primary'} container spacing={3}>
+            <Grid className={'bg-white border border-warning'} container spacing={3}>
                 {loading ? null : <React.Fragment>
                     <Grid item xs={7}>
-                        <img className={classes.image} src={require('../placeholder.png')}/>
+                        {instrument.image == null ? <img className={classes.image} src={require('../placeholder.png')}/>
+                            : <img className={classes.image} src={process.env.PUBLIC_URL + '/img/' + instrument.image}/>}
                     </Grid>
                     <Grid item xs={5}>
                         <h6>{instrument.species}</h6>
                         <h1>{instrument.name}</h1>
                         <h2>{instrument.price}</h2>
                         <p>{instrument.description}</p>
-                        <Button variant="contained" color="primary" onClick={add}>
+                        <button onClick={add} className="btn btn-warning">
                             В КОРЗИНУ
-                        </Button>
+                        </button>
                     </Grid>
                 </React.Fragment>}
             </Grid>
