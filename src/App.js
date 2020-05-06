@@ -38,6 +38,9 @@ import UserContext from "./UserContext";
 import CheckoutPage from "./CheckoutPage/CheckoutPage";
 import InfoIcon from '@material-ui/icons/Info';
 import {useLocalStorage, useSessionStorage} from "react-use-storage";
+import SearchIcon from '@material-ui/icons/Search';
+import SearchModal from "./Search/SearchModal";
+import Box from "@material-ui/core/Box";
 
 const drawerWidth = 240;
 
@@ -111,6 +114,7 @@ function App() {
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const [searchOpen, setSearchOpen] = useState(false);
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -123,6 +127,7 @@ function App() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const isMenuOpen = Boolean(anchorEl);
 
+    //Меню ЛК пользователя
     const handleMenu = (event) => {
         setAnchorEl(event.currentTarget);
     };
@@ -131,6 +136,14 @@ function App() {
         setAnchorEl(null);
     };
 
+    //Окно с фильтрами поиска
+    const handleSearchOpen = () => {
+        setSearchOpen(true);
+    };
+
+    const handleSearchClose = () => {
+        setSearchOpen(false);
+    };
 
     /*А это нужно для работы сайта*/
     const [user, setUser] = useSessionStorage('user', {}); //useState({});
@@ -180,6 +193,15 @@ function App() {
                                 Музмаг
                             </Typography>
                             <IconButton
+                                aria-label="search"
+                                aria-controls="menu-appbar"
+                                aria-haspopup="true"
+                                onClick={handleSearchOpen}
+                                color="inherit"
+                            >
+                                    <SearchIcon/>
+                            </IconButton>
+                            <IconButton
                                 aria-label="account of current user"
                                 aria-controls="menu-appbar"
                                 aria-haspopup="true"
@@ -191,6 +213,7 @@ function App() {
                         </Toolbar>
                         <div>
 
+                                <SearchModal open={searchOpen} handleClose={handleSearchClose}/>
                             <Menu
                                 id="menu-appbar"
                                 anchorEl={anchorEl}
@@ -208,15 +231,18 @@ function App() {
                             >
                                 {user.username ? (
                                     <React.Fragment>
-                                    <MenuItem>{user.username}</MenuItem>
-                                    <MenuItem onClick={logout}>
-                                        Выйти
-                                    </MenuItem>
+                                        <MenuItem>{user.username}</MenuItem>
+                                        <MenuItem onClick={logout}>
+                                            Выйти
+                                        </MenuItem>
                                     </React.Fragment>) :
                                     (<React.Fragment>
                                         <MenuItem onClick={handleClose}>
-                                    <NavLink exact to={Routes.Login}>Войти</NavLink>
-                                    </MenuItem>
+                                            <NavLink exact to={Routes.Login}>Войти</NavLink>
+                                        </MenuItem>
+                                        <MenuItem onClick={handleClose}>
+                                            <NavLink exact to={Routes.Register}>Зарегистрироваться</NavLink>
+                                        </MenuItem>
                                     </React.Fragment>)}
                             </Menu>
                         </div>

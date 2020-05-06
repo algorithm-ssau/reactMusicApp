@@ -11,5 +11,6 @@ export const Routes = {
     Service: '/service',
     Delivery: '/delivery',
     UserWishlist: '/user-wishlist',
-    AddToWishlist: '/add-to-wishlist'
+    AddToWishlist: '/add-to-wishlist',
+    Search: '/search'
 }
