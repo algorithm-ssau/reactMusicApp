@@ -51,11 +51,7 @@
     <list default="true" id="8d452552-0201-4e20-ab7e-390654de3c15" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InstrumentCard/instrumentCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InstrumentCard/instrumentCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InstrumentPage/InstrumentPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/InstrumentPage/InstrumentPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Search/SearchModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Search/SearchModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Search/SearchPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Search/SearchPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +110,8 @@
       <workItem from="1588139849093" duration="9054000" />
       <workItem from="1588316130842" duration="11618000" />
       <workItem from="1588671201592" duration="601000" />
-      <workItem from="1588745179652" duration="34881000" />
+      <workItem from="1588745179652" duration="35357000" />
+      <workItem from="1588833298005" duration="2503000" />
     </task>
     <task id="LOCAL-00001" summary="backend/node_modules в gitignore">
       <created>1587988039616</created>
@@ -158,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588769992932</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Исправление стилей+картинки+доработка поиска">
+      <created>1588785978702</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588785978702</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,17 +199,18 @@
     <MESSAGE value="Добавление в корзину(сохранение в localstorage)" />
     <MESSAGE value="Форма поиска" />
     <MESSAGE value="Работающий поиск" />
-    <option name="LAST_COMMIT_MESSAGE" value="Работающий поиск" />
+    <MESSAGE value="Исправление стилей+картинки+доработка поиска" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправление стилей+картинки+доработка поиска" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588323704607">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1588323704607" />
-    <state x="201" y="0" width="800" height="732" key="CommitChangelistDialog2" timestamp="1588769992151">
+    <state x="201" y="0" width="800" height="732" key="CommitChangelistDialog2" timestamp="1588785975907">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="201" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588769992151" />
+    <state x="201" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1588785975907" />
     <state x="201" y="0" width="800" height="732" key="CommitChangelistDialog2/0.0.1366.735@0.0.1366.735" timestamp="1588063815150" />
     <state x="97" y="100" width="1172" height="538" key="DiffContextDialog" timestamp="1587988097061">
       <screen x="0" y="0" width="1366" height="735" />
@@ -239,10 +244,10 @@
       <screen x="0" y="0" width="1366" height="735" />
     </state>
     <state x="532" y="285" width="298" height="164" key="VCS.ChangelistChooser/0.0.1366.735@0.0.1366.735" timestamp="1587987964147" />
-    <state x="372" y="79" width="806" height="522" key="Vcs.Push.Dialog.v2" timestamp="1588770199239">
+    <state x="372" y="79" width="806" height="522" key="Vcs.Push.Dialog.v2" timestamp="1588786188136">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="372" y="79" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588770199239" />
+    <state x="372" y="79" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1588786188136" />
     <state x="372" y="80" width="806" height="522" key="Vcs.Push.Dialog.v2/0.0.1366.735@0.0.1366.735" timestamp="1588063879356" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1588330659805">
       <screen x="0" y="0" width="1366" height="728" />
