@@ -15,6 +15,11 @@ import {useHistory} from 'react-router-dom';
 import {Routes} from "../routes";
 
 const useStyles = makeStyles((theme) => ({
+    modal: {
+        position: 'absolute',
+        margin: 'auto',
+        top: 0, left: 0, bottom: 0, right: 0,
+    },
     paper: {
         position: 'absolute',
         width: 400,
@@ -38,9 +43,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SearchModal(props) {
     const classes = useStyles();
-    const [price, setPrice] = useState([0, 10000]);
+    const [price, setPrice] = useState([0, 500000]);
     const [name, setName] = useState('');
-    const [species, setSpecies] = useState('');
+    const [species, setSpecies] = useState('guitars');
     let history = useHistory();
 
     const handlePriceChange = (event, newValue) => {
@@ -50,13 +55,14 @@ export default function SearchModal(props) {
         setName(event.target.value);
     };
     const handleSpeciesChange = (event, newValue) => {
-        setSpecies(newValue);
+        setSpecies(newValue.props.value);
     };
 
     const search = () => {
+        console.log(species)
         const data = {
             name: name,
-            species: species.props.value,
+            species: species,
             minPrice: price[0],
             maxPrice: price[1]
         };
@@ -82,8 +88,11 @@ export default function SearchModal(props) {
                 onClose={props.handleClose}
                 aria-labelledby="simple-modal-title"
                 aria-describedby="simple-modal-description"
+
             >
-                <div className={classes.paper}>
+                <div style={{top: `50%`,
+                    left: `50%`,
+                    transform: `translate(-50%, -50%)`}} className={classes.paper}>
                     <h3 id="simple-modal-title">Фильтры поиска</h3>
                     <form>
                         <FormControl className={classes.formControl}>
@@ -99,6 +108,7 @@ export default function SearchModal(props) {
                             <InputLabel id="species-label">Тип</InputLabel>
                             <Select
                                 onChange={handleSpeciesChange}
+                                value={species}
                                 labelId="species-label"
                                 id="species-select"
                                 name="species"

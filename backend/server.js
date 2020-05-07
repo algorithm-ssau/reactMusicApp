@@ -209,7 +209,7 @@ app.post('/search', (req, res) => {
     console.log(req.body);
     if (!req.body) res.status(400).json({code: 1});
     else {
-        mongoose.model(req.body.species, instrumentScheme.set('collection', req.body.species)).find({}, (err, docs) => {
+        if (req.body.species != null) mongoose.model(req.body.species, instrumentScheme.set('collection', req.body.species)).find({}, (err, docs) => {
             if (err) {
                 console.log(err.code);
                 res.status(400).json({code: err.code, reg: false});
