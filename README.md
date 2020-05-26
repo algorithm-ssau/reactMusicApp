@@ -70,6 +70,7 @@ We will always be happy for your help! &#129505;
 <sub><b>Vladislav Klionkin</b></sub>
 </a><br />
 <span>"Kowalski"</span>
+</td>
 <td align="center">
 <a href="https://github.com/ArhireyskiyOleg">
 <img src="https://avatars.githubusercontent.com/alexugarin" width="80" height="80" alt=""/><br />
@@ -86,3 +87,6 @@ We will always be happy for your help! &#129505;
 </td>
 </tr>
 </table>
+
+## &#128220; License
+This project is released under the terms of the GPL-3.0 license.
