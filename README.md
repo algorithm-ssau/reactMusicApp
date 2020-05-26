@@ -53,3 +53,36 @@ git checkout https://github.com/algorithm-ssau/reactMusicApp -b <name_for_new_br
 3. Submit Pull Request with comprehensive description of changes
 
 We will always be happy for your help! &#129505;
+
+## &#11088; Contributors
+<table>
+<tr>
+<td align="center">
+<a href="https://github.com/charlez136">
+<img src="https://avatars.githubusercontent.com/charlez136" width="80" height="80" alt=""/><br />
+<sub><b>Alexey Bulgakov</b></sub>
+</a><br />
+<span>Team Lead "Skipper"</span>
+</td>
+<td align="center">
+<a href="https://github.com/Code5150">
+<img src="https://avatars.githubusercontent.com/Code5150" width="80" height="80" alt=""/><br />
+<sub><b>Vladislav Klionkin</b></sub>
+</a><br />
+<span>"Kowalski"</span>
+<td align="center">
+<a href="https://github.com/ArhireyskiyOleg">
+<img src="https://avatars.githubusercontent.com/alexugarin" width="80" height="80" alt=""/><br />
+<sub><b>Oleg Arhireyskiy</b></sub>
+</a><br />
+<span>"Private"</span>
+<td align="center">
+<a href="https://github.com/BuzlovDima">
+<img src="https://avatars.githubusercontent.com/BuzlovDima" width="80" height="80" alt=""/><br />
+<sub><b>Dmitry Buzlov</b></sub>
+</a><br />
+<span>"Rico"</span>
+</td>
+</td>
+</tr>
+</table>
