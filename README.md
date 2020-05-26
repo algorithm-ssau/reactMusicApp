@@ -29,7 +29,7 @@ npm install -g nodemon
 ```bash
 npm audit fix
 ```
-### &#65039; Launch
+### &#50;&#65039;&#8419; Launch
 #### Steps
 1) Сheck if updates are needed
 In your terminal run:
