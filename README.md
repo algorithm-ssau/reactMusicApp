@@ -43,3 +43,13 @@ In your terminal run:
 in folder /backend nodemon server
 in folder /reactMusicApp npm start
 ```
+
+## How to become a contributor
+1. Clone repository and create a new branch:
+```bash
+git checkout https://github.com/algorithm-ssau/reactMusicApp -b <name_for_new_branch>
+```
+2. Create your changes and check their performance.
+3. Submit Pull Request with comprehensive description of changes
+
+We will always be happy for your help! &#129505;
