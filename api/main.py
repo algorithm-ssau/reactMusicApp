@@ -47,3 +47,23 @@ def get_user(request):
         if user['password_hash'] == password:
             return user
 
+@api.ROUTER('/registration', methods=['POST'])
+def register():
+    print(request)
+    data = request.json
+    user = data['user']
+    password = data['pass']
+    bd = get_db(get_connection())
+    collection = bd.get_collection('users')
+    collection.insert({'username': user, 'password_hash': password})
+    pattern = userTokenPassPattern
+    pattern['username'] = user
+    pattern['password_hash'] = password
+    pattern['time'] = get_current_time()
+    token = jwt.encode(pattern, secretKey, algorithm='HS256')
+    resp = Response('success')
+    resp.headers['Authorization'] = 'Bearer ' + (str(token, 'utf-8'))
+    resp.headers.add("Access-Control-Allow-Origin", "*")
+    resp.headers.add('Access-Control-Allow-Headers', "*")
+    resp.headers.add('Access-Control-Allow-Methods', "*")
+    return resp
