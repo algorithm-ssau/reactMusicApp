@@ -67,3 +67,29 @@ def register():
     resp.headers.add('Access-Control-Allow-Headers', "*")
     resp.headers.add('Access-Control-Allow-Methods', "*")
     return resp
+
+@api.ROUTER('/login', methods=['POST'])
+def login():
+    """
+    Функция авторизации
+    :return: Response, ответ на попытку авторизации
+    """
+    print(request)
+    if (auth_without_time_check(request)):
+        user = get_user(request)
+        pattern = userTokenPassPattern
+        pattern['username'] = user['username']
+        pattern['password_hash'] = user['password_hash']
+        pattern['time'] = get_current_time()
+        token = jwt.encode(pattern, secretKey, algorithm='HS256')
+        resp = jsonify({
+            'user': {
+                'username': user['username']
+            }
+        })
+        resp.headers.add('Authorization', 'Bearer ' + (str(token, 'utf-8')))
+        resp.headers.add("Access-Control-Allow-Origin", "*")
+        resp.headers.add('Access-Control-Allow-Headers', "*")
+        resp.headers.add('Access-Control-Allow-Methods', "*")
+        return resp
+    abort(401)
