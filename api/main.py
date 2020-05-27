@@ -34,10 +34,6 @@ APP.include_router(
 )
 
 def get_user(request):
-    """
-    :param request:
-    :return:
-    """
     data = request.json
     user = data['user']
     password = data['pass']
@@ -70,10 +66,6 @@ def register():
 
 @api.ROUTER('/login', methods=['POST'])
 def login():
-    """
-    Функция авторизации
-    :return: Response, ответ на попытку авторизации
-    """
     print(request)
     if (auth_without_time_check(request)):
         user = get_user(request)
@@ -93,3 +85,36 @@ def login():
         resp.headers.add('Access-Control-Allow-Methods', "*")
         return resp
     abort(401)
+
+def search_lots(id_it):
+    conn = get_connection()
+    db = get_db(conn)
+    collection = db.get_collection('lots')
+    res = []
+    if id_it == '':
+        for lot in collection.find():
+            temp = lot
+            temp['_id'] = str(temp['_id'])
+            res.append(temp)
+    else:
+        for lot in collection.find({'_id': ObjectId(id_it)}):
+            temp = lot
+            temp['_id'] = str(temp['_id'])
+            res.append(temp)
+
+    resp = jsonify(res)
+    resp.headers.add("Access-Control-Allow-Origin", "*")
+    resp.headers.add('Access-Control-Allow-Headers', "*")
+    resp.headers.add('Access-Control-Allow-Methods', "*")
+    return resp
+
+def show_all_lots():
+    return search_lots('')
+
+@api.ROUTER('/search')
+@api.ROUTER('/search/<id_it>')
+def function_for_id_it(id_it=None):
+    if id_it:
+        return search_lots(id_it)
+    else:
+        return show_all_lots()
