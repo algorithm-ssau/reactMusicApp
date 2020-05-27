@@ -32,3 +32,18 @@ APP.include_router(
     tags=['api']
 
 )
+
+def get_user(request):
+    """
+    :param request:
+    :return:
+    """
+    data = request.json
+    user = data['user']
+    password = data['pass']
+    users = get_db(get_connection())['users']
+    found = users.find({'username': user})
+    for user in found:
+        if user['password_hash'] == password:
+            return user
+
