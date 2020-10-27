@@ -59,7 +59,7 @@ cffi==1.14.0
 cfn-flip==1.2.2
 chardet==3.0.4
 colorama==0.4.3
-cryptography==2.8
+cryptography==3.2
 docutils==0.16
 durationpy==0.5
 Flask==1.1.1
