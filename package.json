@@ -16,7 +16,7 @@
     "clsx": "^1.1.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
-    "react-datepicker": "^3.0.0",
+    "react-datepicker": "^4.0.0",
     "react-dom": "^16.13.1",
     "react-hook-form": "^6.6.0",
     "react-router-dom": "^5.2.0",
